@@ -1,0 +1,17 @@
+node_modules/
+.expo/
+dist/
+web-build/
+*.log
+.DS_Store
+
+# Native build output from `expo prebuild`
+/ios
+/android
+
+# OCR tool build artifacts
+tools/**/bin/
+tools/**/obj/
+
+# Large source PDF (regenerate/download as needed)
+source/*.pdf

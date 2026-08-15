@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "Brain Bee Flashcards",
+    "slug": "brain-bee-flashcards",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "scheme": "brainbee",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#0f172a"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.example.brainbeeflashcards"
+    },
+    "android": {
+      "package": "com.example.brainbeeflashcards"
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
