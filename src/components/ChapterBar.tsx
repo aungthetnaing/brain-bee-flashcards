@@ -36,14 +36,15 @@ export function ChapterBar({ chapters, selected, onSelect }: Props) {
 
 const styles = StyleSheet.create({
   row: {
-    gap: spacing.sm,
-    paddingHorizontal: spacing.lg,
-    paddingVertical: spacing.sm,
+    gap: spacing.xs,
+    paddingHorizontal: spacing.md,
+    paddingVertical: spacing.xs,
+    alignItems: "center",
   },
   chip: {
-    paddingHorizontal: spacing.md,
-    paddingVertical: spacing.sm,
-    borderRadius: radius.md,
+    paddingHorizontal: spacing.sm,
+    paddingVertical: 5,
+    borderRadius: radius.sm,
     backgroundColor: colors.surface,
     borderWidth: 1,
     borderColor: colors.border,
@@ -54,7 +55,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: colors.textMuted,
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: "600",
   },
   textActive: {

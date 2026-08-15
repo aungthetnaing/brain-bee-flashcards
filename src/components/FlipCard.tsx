@@ -1,4 +1,4 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 
 import { colors, radius, spacing } from "../theme";
 import { BrainCard } from "../types";
@@ -9,45 +9,56 @@ interface Props {
   onToggle: () => void;
 }
 
-/** Tap-to-reveal study card: question on the front, answer + context on the back. */
+/**
+ * Study card with pyramidal clues. The clue/answer area scrolls independently,
+ * so reading long text never flips the card — revealing is an explicit button.
+ */
 export function FlipCard({ card, revealed, onToggle }: Props) {
   return (
-    <Pressable style={styles.card} onPress={onToggle}>
+    <View style={styles.card}>
       <Text style={styles.chapter}>{card.chapter}</Text>
 
-      {!revealed ? (
-        <View style={styles.body}>
-          {card.clues.map((clue, i) => (
+      <ScrollView
+        style={styles.scroll}
+        contentContainerStyle={styles.scrollContent}
+        showsVerticalScrollIndicator
+      >
+        {!revealed ? (
+          card.clues.map((clue, i) => (
             <View key={i} style={styles.clueRow}>
               <Text style={styles.clueNum}>{i + 1}</Text>
               <Text style={styles.clue}>{clue}</Text>
             </View>
-          ))}
-          <Text style={styles.hint}>Tap to reveal the answer</Text>
-        </View>
-      ) : (
-        <View style={styles.body}>
-          <Text style={styles.answerLabel}>Answer</Text>
-          <Text style={styles.answer}>{card.answer}</Text>
-          {card.explanation ? (
-            <Text style={styles.explanation}>{card.explanation}</Text>
-          ) : null}
-        </View>
-      )}
-    </Pressable>
+          ))
+        ) : (
+          <View>
+            <Text style={styles.answerLabel}>Answer</Text>
+            <Text style={styles.answer}>{card.answer}</Text>
+            {card.explanation ? (
+              <Text style={styles.explanation}>{card.explanation}</Text>
+            ) : null}
+          </View>
+        )}
+      </ScrollView>
+
+      <Pressable style={styles.revealButton} onPress={onToggle}>
+        <Text style={styles.revealText}>
+          {revealed ? "Show clues" : "Reveal answer"}
+        </Text>
+      </Pressable>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   card: {
+    flex: 1,
     width: "100%",
-    minHeight: 320,
     borderRadius: radius.lg,
     backgroundColor: colors.surface,
     borderWidth: 1,
     borderColor: colors.border,
     padding: spacing.lg,
-    justifyContent: "flex-start",
   },
   chapter: {
     color: colors.accent,
@@ -57,15 +68,11 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
     marginBottom: spacing.md,
   },
-  body: {
+  scroll: {
     flex: 1,
-    justifyContent: "center",
   },
-  question: {
-    color: colors.text,
-    fontSize: 24,
-    fontWeight: "700",
-    lineHeight: 32,
+  scrollContent: {
+    paddingBottom: spacing.md,
   },
   clueRow: {
     flexDirection: "row",
@@ -86,11 +93,6 @@ const styles = StyleSheet.create({
     fontSize: 17,
     lineHeight: 24,
   },
-  hint: {
-    color: colors.textMuted,
-    fontSize: 14,
-    marginTop: spacing.lg,
-  },
   answerLabel: {
     color: colors.textMuted,
     fontSize: 13,
@@ -110,5 +112,17 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 24,
     marginTop: spacing.md,
+  },
+  revealButton: {
+    marginTop: spacing.md,
+    paddingVertical: spacing.md,
+    borderRadius: radius.md,
+    alignItems: "center",
+    backgroundColor: colors.primary,
+  },
+  revealText: {
+    color: colors.text,
+    fontSize: 16,
+    fontWeight: "700",
   },
 });
