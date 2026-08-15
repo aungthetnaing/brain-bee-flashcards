@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.surface,
     borderWidth: 1,
     borderColor: colors.border,
-    padding: spacing.lg,
+    padding: spacing.md,
   },
   chapter: {
     color: colors.accent,
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     textTransform: "uppercase",
     letterSpacing: 0.5,
-    marginBottom: spacing.md,
+    marginBottom: spacing.sm,
   },
   scroll: {
     flex: 1,

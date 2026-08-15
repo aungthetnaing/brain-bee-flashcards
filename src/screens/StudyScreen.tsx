@@ -81,17 +81,17 @@ export function StudyScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingBottom: spacing.lg,
+    paddingBottom: spacing.sm,
   },
   progress: {
     color: colors.textMuted,
-    fontSize: 14,
+    fontSize: 13,
     textAlign: "center",
-    marginVertical: spacing.sm,
+    marginVertical: spacing.xs,
   },
   cardWrap: {
     flex: 1,
-    paddingHorizontal: spacing.lg,
+    paddingHorizontal: spacing.md,
     justifyContent: "center",
   },
   empty: {
@@ -103,8 +103,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     gap: spacing.sm,
-    paddingHorizontal: spacing.lg,
-    marginTop: spacing.md,
+    paddingHorizontal: spacing.md,
+    marginTop: spacing.sm,
   },
   button: {
     flex: 1,
