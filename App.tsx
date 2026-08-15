@@ -30,7 +30,7 @@ export default function App() {
 
       <View style={styles.appBar}>
         <Text style={styles.title}>🧠 Brain Bee</Text>
-        <Text style={styles.subtitle}>Brain Facts study & quiz</Text>
+        <Text style={styles.subtitle}>Brain Facts · study & written round</Text>
       </View>
 
       <View style={styles.content}>

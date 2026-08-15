@@ -3,1385 +3,3410 @@ import { BrainCard } from "../types";
 /**
  * Brain Bee–style flashcards derived from the Society for Neuroscience
  * "Brain Facts: A Primer on the Brain and Nervous System" (2018 edition).
- * Content was OCR-extracted from the source PDF and condensed into
- * question / answer / distractor sets for study and quizzing.
+ * Each card is written as a PYRAMIDAL clue set (ordered hardest/most obscure
+ * first to most definitive last), matching the Brain Bee / Science Bee written
+ * and oral rounds — short-answer recall, buzz early for more points.
  *
  * Chapters follow the book's table of contents.
  */
 export const BRAIN_FACTS: BrainCard[] = [
-  // ────────────────────────── Brain Basics ──────────────────────────
   {
     id: "bb-1",
     chapter: "Brain Basics",
-    question: "What is the largest part of the human brain?",
+    clues: [
+      "This region expanded during human evolution and is responsible for our most complex thoughts and conscious experiences.",
+      "The largest structure of the brain composed of two hemispheres joined by nerve fibers.",
+      "It is the single largest part of the human brain, housing the cortex.",
+    ],
     answer: "The cerebrum",
-    distractors: ["The cerebellum", "The brainstem", "The thalamus"],
-    explanation:
-      "The cerebrum is divided into left and right hemispheres connected by the corpus callosum.",
+    explanation: "The cerebrum is divided into left and right hemispheres connected by the corpus callosum.",
   },
   {
     id: "bb-2",
     chapter: "Brain Basics",
-    question:
-      "Which large bundle of nerve fibers connects the two cerebral hemispheres?",
+    clues: [
+      "This bundle of approximately 200 million axons serves as the primary communication pathway between the two halves of the brain.",
+      "A major nerve fiber bundle connecting the left and right hemispheres.",
+      "This large bundle of nerve fibers connects the two cerebral hemispheres.",
+    ],
     answer: "The corpus callosum",
-    distractors: ["The brainstem", "The fornix", "The internal capsule"],
-    explanation:
-      "It carries information from one side of the brain to the other.",
+    explanation: "It carries information from one side of the brain to the other.",
   },
   {
     id: "bb-3",
     chapter: "Brain Basics",
-    question:
-      "The deeply folded outer layer of the cerebrum is called the…",
+    clues: [
+      "Its many folds dramatically increase the surface area available for processing information, enabling more neurons to fit in the cranium.",
+      "The wrinkled outer surface of the cerebrum containing neuron cell bodies.",
+      "The deeply folded outer layer of the cerebrum where most neural processing occurs.",
+    ],
     answer: "Cerebral cortex",
-    distractors: ["Corpus callosum", "Meninges", "White matter"],
-    explanation:
-      "Its folds increase surface area, packing in more neurons and processing power.",
+    explanation: "Its folds increase surface area, packing in more neurons and processing power.",
   },
   {
     id: "bb-4",
     chapter: "Brain Basics",
-    question: "Which lobe is primarily responsible for processing vision?",
+    clues: [
+      "Located at the back of the brain, this lobe processes roughly 30 percent of all cortical activity.",
+      "The most posterior brain region specialized for analyzing light and color.",
+      "It processes visual information and is responsible for recognizing colors and shapes.",
+    ],
     answer: "The occipital lobe",
-    distractors: ["The frontal lobe", "The temporal lobe", "The parietal lobe"],
-    explanation:
-      "The occipital lobes at the back of the brain recognize colors and shapes.",
+    explanation: "The occipital lobes at the back of the brain recognize colors and shapes.",
   },
   {
     id: "bb-5",
     chapter: "Brain Basics",
-    question:
-      "Which lobe coordinates voluntary movement, planning, and problem-solving?",
-    answer: "The frontal lobe",
-    distractors: [
-      "The occipital lobe",
-      "The parietal lobe",
-      "The temporal lobe",
+    clues: [
+      "Damage to this lobe often results in personality changes, poor impulse control, and difficulty with decision-making.",
+      "Contains the prefrontal cortex and is critical for executing complex behaviors.",
+      "It coordinates voluntary movement, planning, and problem-solving.",
     ],
-    explanation:
-      "Frontal lobes handle higher cognitive skills, personality, and speech production.",
+    answer: "The frontal lobe",
+    explanation: "Frontal lobes handle higher cognitive skills, personality, and speech production.",
   },
   {
     id: "bb-6",
     chapter: "Brain Basics",
-    question:
-      "Which temporal-lobe structure is essential for encoding new memories?",
+    clues: [
+      "When removed surgically in patient H.M., it resulted in the loss of the ability to form new conscious memories despite preserved older memories.",
+      "A curved temporal lobe structure essential for converting short-term memories into long-term storage.",
+      "This structure is essential for encoding new memories.",
+    ],
     answer: "The hippocampus",
-    distractors: ["The amygdala", "The thalamus", "The hypothalamus"],
-    explanation:
-      "The amygdala nearby integrates memory with emotion; both are part of the limbic system.",
+    explanation: "The amygdala nearby integrates memory with emotion; both are part of the limbic system.",
   },
   {
     id: "bb-7",
     chapter: "Brain Basics",
-    question:
-      "Which structure relays sensory information to the rest of the brain?",
+    clues: [
+      "This structure acts as the brain's central relay station, processing incoming sensory information before distributing it throughout the cortex.",
+      "A forebrain structure that integrates and passes along sensory signals.",
+      "This structure relays sensory information to the rest of the brain.",
+    ],
     answer: "The thalamus",
-    distractors: ["The cerebellum", "The pituitary gland", "The pons"],
-    explanation:
-      "The hypothalamus, by contrast, sends hormonal signals via the pituitary gland.",
+    explanation: "The hypothalamus, by contrast, sends hormonal signals via the pituitary gland.",
   },
   {
     id: "bb-8",
     chapter: "Brain Basics",
-    question:
-      "Which brain region fine-tunes movement, balance, and coordination?",
+    clues: [
+      "Long-term alcohol abuse commonly damages this region, causing poor coordination and unsteady gait.",
+      "Located at the back of the brain, this structure is essential for motor learning.",
+      "This brain region fine-tunes movement, balance, and coordination.",
+    ],
     answer: "The cerebellum",
-    distractors: ["The occipital lobe", "The amygdala", "The corpus callosum"],
-    explanation:
-      "The cerebellum ('little brain') sits at the back beneath the cerebrum.",
+    explanation: "The cerebellum ('little brain') sits at the back beneath the cerebrum.",
   },
   {
     id: "bb-9",
     chapter: "Brain Basics",
-    question:
-      "The midbrain, pons, and medulla together make up the…",
+    clues: [
+      "These three regions control vital functions like heart rate and breathing and coordinate escape responses.",
+      "Composed of the midbrain, pons, and medulla working together.",
+      "The midbrain, pons, and medulla together make up this structure.",
+    ],
     answer: "Brainstem",
-    distractors: ["Limbic system", "Forebrain", "Basal ganglia"],
-    explanation:
-      "The brainstem controls vital functions like breathing, heart rate, and blood pressure.",
+    explanation: "The brainstem controls vital functions like breathing, heart rate, and blood pressure.",
   },
   {
     id: "bb-10",
     chapter: "Brain Basics",
-    question: "What is the basic signaling cell of the nervous system?",
-    answer: "The neuron",
-    distractors: [
-      "The glial cell",
-      "The Schwann cell",
-      "The astrocyte",
+    clues: [
+      "These cells exchange electrical signals with thousands of other similar cells to create the brain's computational circuits.",
+      "Individual signaling cells that communicate across specialized gaps.",
+      "This is the basic signaling cell of the nervous system.",
     ],
-    explanation:
-      "The brain contains billions of neurons that transmit information as electrical and chemical signals.",
+    answer: "The neuron",
+    explanation: "The brain contains billions of neurons that transmit information as electrical and chemical signals.",
   },
   {
     id: "bb-11",
     chapter: "Brain Basics",
-    question:
+    clues: [
+      "Neurotransmitters are released here and cross a fluid-filled gap to activate receptors on the receiving cell.",
+      "The tiny gap between neurons where chemical communication occurs.",
       "Across which tiny gap do neurons communicate using neurotransmitters?",
+    ],
     answer: "The synapse",
-    distractors: ["The node of Ranvier", "The axon hillock", "The dendrite"],
-    explanation:
-      "An electrical impulse triggers chemical neurotransmitter release across the synaptic cleft.",
+    explanation: "An electrical impulse triggers chemical neurotransmitter release across the synaptic cleft.",
   },
   {
     id: "bb-12",
     chapter: "Brain Basics",
-    question:
-      "What fatty insulating sheath speeds electrical signals along axons?",
+    clues: [
+      "This fatty insulation, wrapped around axons by glial cells, can increase signal transmission speed by up to 100-fold.",
+      "A fatty covering that wraps around axons to speed transmission.",
+      "This fatty insulating sheath speeds electrical signals along axons.",
+    ],
     answer: "Myelin",
-    distractors: ["Collagen", "Keratin", "Fibrin"],
-    explanation:
-      "Myelin is produced by oligodendrocytes in the CNS and Schwann cells in the PNS.",
+    explanation: "Myelin is produced by oligodendrocytes in the CNS and Schwann cells in the PNS.",
   },
-
-  // ─────────────────────── Senses & Perception ───────────────────────
   {
     id: "sp-1",
     chapter: "Senses & Perception",
-    question:
-      "Which light-sensitive layer at the back of the eye contains rods and cones?",
+    clues: [
+      "This tissue contains three types of neurons organized in layers, with photoreceptors positioned counterintuitively at the back.",
+      "Light-sensitive tissue at the back of the eye containing rods and cones.",
+      "This light-sensitive layer at the back of the eye contains rods and cones.",
+    ],
     answer: "The retina",
-    distractors: ["The cornea", "The iris", "The sclera"],
-    explanation:
-      "Rods handle dim light and motion; cones handle color and detail.",
+    explanation: "Rods handle dim light and motion; cones handle color and detail.",
   },
   {
     id: "sp-2",
     chapter: "Senses & Perception",
-    question: "Which photoreceptors are responsible for color vision?",
+    clues: [
+      "These photoreceptors contain three types of light-sensitive pigments that respond to different wavelengths.",
+      "These photoreceptors mediate detailed daytime vision and color discrimination.",
+      "These photoreceptors are responsible for color vision.",
+    ],
     answer: "Cones",
-    distractors: ["Rods", "Ganglion cells", "Bipolar cells"],
-    explanation:
-      "Humans have three cone types tuned to red, green, and blue wavelengths.",
+    explanation: "Humans have three cone types tuned to red, green, and blue wavelengths.",
   },
   {
     id: "sp-3",
     chapter: "Senses & Perception",
-    question: "Which cranial nerve carries visual information to the brain?",
-    answer: "The optic nerve",
-    distractors: [
-      "The auditory nerve",
-      "The vagus nerve",
-      "The trigeminal nerve",
+    clues: [
+      "The axons of retinal ganglion cells bundle together and exit the eye at a point that creates a natural blind spot.",
+      "Carries visual information from the retina toward the brain.",
+      "This cranial nerve carries visual information to the brain.",
     ],
+    answer: "The optic nerve",
     explanation: "Visual signals are ultimately processed in the occipital lobe.",
   },
   {
     id: "sp-4",
     chapter: "Senses & Perception",
-    question:
-      "Which spiral, fluid-filled structure of the inner ear transduces sound?",
-    answer: "The cochlea",
-    distractors: [
-      "The eardrum",
-      "The semicircular canals",
-      "The eustachian tube",
+    clues: [
+      "This snail-shaped inner ear structure contains the basilar membrane whose different regions vibrate at different sound frequencies.",
+      "A fluid-filled auditory structure containing hair cells for sound detection.",
+      "This spiral, fluid-filled structure of the inner ear transduces sound.",
     ],
-    explanation:
-      "Hair cells in the cochlea convert vibrations into electrical signals.",
+    answer: "The cochlea",
+    explanation: "Hair cells in the cochlea convert vibrations into electrical signals.",
   },
   {
     id: "sp-5",
     chapter: "Senses & Perception",
-    question: "Which sense is most directly linked to memory and emotion?",
+    clues: [
+      "This sense is unique because olfactory neurons project directly to the limbic system, bypassing the thalamus.",
+      "Directly linked to emotion and memory through its anatomical connections.",
+      "This sense is most directly linked to memory and emotion.",
+    ],
     answer: "Smell (olfaction)",
-    distractors: ["Vision", "Hearing", "Touch"],
-    explanation:
-      "Olfactory signals reach the limbic system relatively directly, unlike other senses.",
+    explanation: "Olfactory signals reach the limbic system relatively directly, unlike other senses.",
   },
   {
     id: "sp-6",
     chapter: "Senses & Perception",
-    question: "What are the five basic tastes detected by the tongue?",
-    answer: "Sweet, sour, salty, bitter, umami",
-    distractors: [
-      "Sweet, sour, salty, bitter, spicy",
-      "Sweet, salty, spicy, fatty, sour",
-      "Sweet, bitter, minty, salty, umami",
+    clues: [
+      "These taste qualities are detected across the entire tongue, despite the common misconception of taste regions.",
+      "Basic taste categories recognized by taste receptor cells worldwide.",
+      "These are the five basic tastes detected by the tongue.",
     ],
-    explanation:
-      "Umami is the savory taste associated with glutamate.",
+    answer: "Sweet, sour, salty, bitter, umami",
+    explanation: "Umami is the savory taste associated with glutamate.",
   },
   {
     id: "sp-7",
     chapter: "Senses & Perception",
-    question:
-      "The specialized nerve endings that detect painful stimuli are called…",
+    clues: [
+      "These specialized sensory endings express receptors that respond to tissue-damaging stimuli.",
+      "Sensory nerve endings that detect harmful stimuli.",
+      "The specialized nerve endings that detect painful stimuli are called this.",
+    ],
     answer: "Nociceptors",
-    distractors: ["Proprioceptors", "Photoreceptors", "Baroreceptors"],
-    explanation:
-      "Nociceptors signal potential or actual tissue damage.",
+    explanation: "Nociceptors signal potential or actual tissue damage.",
   },
   {
     id: "sp-8",
     chapter: "Senses & Perception",
-    question:
-      "The sense of the position and movement of your own body is called…",
+    clues: [
+      "This sense depends on proprioceptors like muscle spindles and Golgi tendon organs located within muscles.",
+      "The sensory system detecting body position and movement in space.",
+      "The sense of the position and movement of your own body is called this.",
+    ],
     answer: "Proprioception",
-    distractors: ["Nociception", "Interoception", "Echolocation"],
-    explanation:
-      "Receptors in muscles and joints tell the brain where limbs are without looking.",
+    explanation: "Receptors in muscles and joints tell the brain where limbs are without looking.",
   },
-
-  // ───────────────────────────── Movement ─────────────────────────────
   {
     id: "mv-1",
     chapter: "Movement",
-    question:
-      "Which cortical strip sends commands to initiate voluntary movement?",
-    answer: "The primary motor cortex",
-    distractors: [
-      "The somatosensory cortex",
-      "The visual cortex",
-      "The auditory cortex",
+    clues: [
+      "This cortical strip is organized as a motor homunculus with body parts represented in proportion to their motor control complexity.",
+      "A cortical region sending commands to muscles for voluntary action.",
+      "This cortical strip sends commands to initiate voluntary movement.",
     ],
-    explanation:
-      "It lies in the frontal lobe just in front of the central sulcus.",
+    answer: "The primary motor cortex",
+    explanation: "It lies in the frontal lobe just in front of the central sulcus.",
   },
   {
     id: "mv-2",
     chapter: "Movement",
-    question:
-      "A group of deep-brain structures that help select and smooth movements is the…",
-    answer: "Basal ganglia",
-    distractors: [
-      "The limbic system",
-      "The reticular formation",
-      "The choroid plexus",
+    clues: [
+      "These structures form feedback loops with the cortex to select appropriate movements and suppress competing ones.",
+      "Deep-brain structures that refine and coordinate motor output.",
+      "A group of deep-brain structures that help select and smooth movements.",
     ],
-    explanation:
-      "Dysfunction here contributes to disorders like Parkinson's disease.",
+    answer: "Basal ganglia",
+    explanation: "Dysfunction here contributes to disorders like Parkinson's disease.",
   },
   {
     id: "mv-3",
     chapter: "Movement",
-    question:
-      "Which neurotransmitter is released at the neuromuscular junction to trigger muscle contraction?",
+    clues: [
+      "Released at the neuromuscular junction, this neurotransmitter binds to receptors on muscle fiber membranes.",
+      "The main neurotransmitter at motor nerve endings.",
+      "This neurotransmitter is released at the neuromuscular junction to trigger muscle contraction.",
+    ],
     answer: "Acetylcholine",
-    distractors: ["Dopamine", "Serotonin", "GABA"],
-    explanation:
-      "Motor neurons release acetylcholine onto muscle fibers.",
+    explanation: "Motor neurons release acetylcholine onto muscle fibers.",
   },
   {
     id: "mv-4",
     chapter: "Movement",
-    question:
-      "Rapid, automatic responses like the knee-jerk are coordinated mainly by the…",
+    clues: [
+      "Circuits within this structure can generate reflex responses without requiring brain involvement.",
+      "Coordinates automatic reflex actions through local circuits.",
+      "Rapid, automatic responses like the knee-jerk are coordinated mainly by this.",
+    ],
     answer: "Spinal cord",
-    distractors: ["Cerebellum", "Cerebral cortex", "Thalamus"],
-    explanation:
-      "Reflex arcs can act through the spinal cord before the brain is even aware.",
+    explanation: "Reflex arcs can act through the spinal cord before the brain is even aware.",
   },
   {
     id: "mv-5",
     chapter: "Movement",
-    question:
-      "Which brain structure is critical for balance and the timing of movements?",
+    clues: [
+      "This structure ensures proper timing of muscle actions and enables adaptation to unexpected changes.",
+      "Essential for the timing and coordination of complex movements.",
+      "This brain structure is critical for balance and the timing of movements.",
+    ],
     answer: "The cerebellum",
-    distractors: ["The amygdala", "The hippocampus", "The pituitary"],
-    explanation:
-      "It compares intended with actual movement and makes corrections.",
+    explanation: "It compares intended with actual movement and makes corrections.",
   },
-
-  // ───────────────── Learning, Memory & Emotions ─────────────────
   {
     id: "lm-1",
     chapter: "Learning, Memory & Emotions",
-    question:
-      "The strengthening of synapses thought to underlie learning is called…",
-    answer: "Long-term potentiation (LTP)",
-    distractors: [
-      "Long-term depression",
-      "Habituation",
-      "Myelination",
+    clues: [
+      "This process involves persistent changes in synapse number, shape, and neurotransmitter release capacity.",
+      "Increased synaptic responsiveness resulting from repeated neural activity.",
+      "The strengthening of synapses thought to underlie learning is called this.",
     ],
-    explanation:
-      "LTP makes communication between neurons more efficient with repeated activity.",
+    answer: "Long-term potentiation (LTP)",
+    explanation: "LTP makes communication between neurons more efficient with repeated activity.",
   },
   {
     id: "lm-2",
     chapter: "Learning, Memory & Emotions",
-    question:
+    clues: [
+      "The removal of medial temporal lobe structures from this famous patient resulted in profound amnesia for new information.",
+      "Structures whose removal caused the inability to form new memories.",
       "Patient H.M., who lost the ability to form new memories, had which region removed?",
-    answer: "The hippocampus (medial temporal lobes)",
-    distractors: [
-      "The prefrontal cortex",
-      "The cerebellum",
-      "The occipital lobe",
     ],
-    explanation:
-      "H.M. could still learn new motor skills, showing multiple memory systems exist.",
+    answer: "The hippocampus (medial temporal lobes)",
+    explanation: "H.M. could still learn new motor skills, showing multiple memory systems exist.",
   },
   {
     id: "lm-3",
     chapter: "Learning, Memory & Emotions",
-    question:
-      "Memory for facts and events that you can consciously recall is called…",
-    answer: "Declarative (explicit) memory",
-    distractors: [
-      "Procedural memory",
-      "Working memory",
-      "Sensory memory",
+    clues: [
+      "This type of memory includes both factual knowledge and autobiographical experiences that can be consciously recalled.",
+      "Memory for facts and events that people can intentionally retrieve.",
+      "Memory for facts and events that you can consciously recall is called this.",
     ],
-    explanation:
-      "Procedural (implicit) memory covers skills like riding a bike.",
+    answer: "Declarative (explicit) memory",
+    explanation: "Procedural (implicit) memory covers skills like riding a bike.",
   },
   {
     id: "lm-4",
     chapter: "Learning, Memory & Emotions",
-    question:
-      "Which almond-shaped structure attaches emotional significance, especially fear, to events?",
+    clues: [
+      "This almond-shaped limbic structure is particularly important for fear conditioning and attaching emotional significance to events.",
+      "A paired structure processing emotional responses and memory associations.",
+      "This almond-shaped structure attaches emotional significance, especially fear, to events.",
+    ],
     answer: "The amygdala",
-    distractors: ["The hippocampus", "The thalamus", "The hypothalamus"],
-    explanation:
-      "It is central to processing fear and emotional memory.",
+    explanation: "It is central to processing fear and emotional memory.",
   },
   {
     id: "lm-5",
     chapter: "Learning, Memory & Emotions",
-    question:
-      "The temporary holding and manipulation of information 'in mind' is called…",
-    answer: "Working memory",
-    distractors: [
-      "Long-term memory",
-      "Procedural memory",
-      "Flashbulb memory",
+    clues: [
+      "This temporary memory system has limited capacity and is active when you mentally maintain information during a task.",
+      "The ability to hold and manipulate information for brief periods.",
+      "The temporary holding and manipulation of information in mind is called this.",
     ],
-    explanation:
-      "Working memory relies heavily on the prefrontal cortex.",
+    answer: "Working memory",
+    explanation: "Working memory relies heavily on the prefrontal cortex.",
   },
-
-  // ─────────────── Thinking, Planning & Language ───────────────
   {
     id: "tp-1",
     chapter: "Thinking, Planning & Language",
-    question:
-      "Higher-order skills like planning, inhibition, and working memory are collectively called…",
+    clues: [
+      "These higher-order processes depend on the prefrontal cortex and include inhibition, working memory, and cognitive flexibility.",
+      "Higher-level skills including planning and impulse control.",
+      "Higher-order skills like planning, inhibition, and working memory are collectively called this.",
+    ],
     answer: "Executive function",
-    distractors: ["Proprioception", "Homeostasis", "Consolidation"],
-    explanation:
-      "Executive functions depend largely on the prefrontal cortex.",
+    explanation: "Executive functions depend largely on the prefrontal cortex.",
   },
   {
     id: "tp-2",
     chapter: "Thinking, Planning & Language",
-    question:
+    clues: [
+      "Damage to this area impairs the ability to produce fluent, grammatically correct speech.",
+      "This frontal area is critical for speech production.",
       "Damage to Broca's area typically impairs which ability?",
-    answer: "Producing fluent speech",
-    distractors: [
-      "Understanding speech",
-      "Seeing color",
-      "Feeling pain",
     ],
-    explanation:
-      "Broca's area in the frontal lobe governs speech production.",
+    answer: "Producing fluent speech",
+    explanation: "Broca's area in the frontal lobe governs speech production.",
   },
   {
     id: "tp-3",
     chapter: "Thinking, Planning & Language",
-    question:
+    clues: [
+      "Damage to this temporal region impairs the comprehension of others' speech despite leaving speech production relatively intact.",
+      "This area processes the meaning of spoken language.",
       "Damage to Wernicke's area typically impairs which ability?",
-    answer: "Understanding language",
-    distractors: [
-      "Producing speech",
-      "Moving the legs",
-      "Balancing",
     ],
-    explanation:
-      "Wernicke's area in the temporal lobe governs language comprehension.",
+    answer: "Understanding language",
+    explanation: "Wernicke's area in the temporal lobe governs language comprehension.",
   },
   {
     id: "tp-4",
     chapter: "Thinking, Planning & Language",
-    question:
+    clues: [
+      "This region of the frontal lobe is the last to fully mature and continues developing into the mid-20s.",
+      "Seat of executive function and complex decision-making.",
       "Which lobe is the primary seat of executive function and decision-making?",
-    answer: "The frontal lobe (prefrontal cortex)",
-    distractors: [
-      "The occipital lobe",
-      "The temporal lobe",
-      "The parietal lobe",
     ],
-    explanation:
-      "The prefrontal cortex is among the last brain regions to fully mature.",
+    answer: "The frontal lobe (prefrontal cortex)",
+    explanation: "The prefrontal cortex is among the last brain regions to fully mature.",
   },
-
-  // ──────────────────── The Developing Brain ────────────────────
   {
     id: "dv-1",
     chapter: "The Developing Brain",
-    question:
-      "The process by which a neuron's axon grows toward its target is guided by…",
-    answer: "Chemical guidance cues (growth cones)",
-    distractors: [
-      "Random diffusion only",
-      "Blood pressure",
-      "Gravity",
+    clues: [
+      "Growth cones at the axon tip are guided by molecular signals including netrins and semaphorins to their appropriate targets.",
+      "Molecular cues direct developing axons toward their destinations.",
+      "The process by which a neuron's axon grows toward its target is guided by this.",
     ],
-    explanation:
-      "Growth cones at the axon tip sense attractive and repulsive molecular signals.",
+    answer: "Chemical guidance cues (growth cones)",
+    explanation: "Growth cones at the axon tip sense attractive and repulsive molecular signals.",
   },
   {
     id: "dv-2",
     chapter: "The Developing Brain",
-    question:
-      "In early development, the brain overproduces neurons and synapses, then removes extras through…",
-    answer: "Apoptosis and synaptic pruning",
-    distractors: [
-      "Myelination",
-      "Long-term potentiation",
-      "Neurogenesis",
+    clues: [
+      "During development, the brain overproduces approximately twice the synapses needed, then eliminates weak connections.",
+      "The selective removal of excess neurons and unnecessary synaptic connections.",
+      "In early development, the brain overproduces neurons and synapses, then removes extras through this.",
     ],
-    explanation:
-      "Pruning refines circuits based on activity — 'use it or lose it.'",
+    answer: "Apoptosis and synaptic pruning",
+    explanation: "Pruning refines circuits based on activity — 'use it or lose it.'",
   },
   {
     id: "dv-3",
     chapter: "The Developing Brain",
-    question:
-      "The neural tube, which forms the brain and spinal cord, develops from which germ layer?",
+    clues: [
+      "This outermost embryonic layer gives rise to the nervous system through neural induction.",
+      "The outer germ layer that forms the brain and spinal cord.",
+      "The neural tube develops from which germ layer?",
+    ],
     answer: "The ectoderm",
-    distractors: ["The mesoderm", "The endoderm", "The blastoderm"],
-    explanation:
-      "The neural tube forms very early in embryonic development.",
+    explanation: "The neural tube forms very early in embryonic development.",
   },
   {
     id: "dv-4",
     chapter: "The Developing Brain",
-    question:
-      "Windows of heightened sensitivity when experience strongly shapes circuits are called…",
-    answer: "Critical (sensitive) periods",
-    distractors: [
-      "Refractory periods",
-      "Latent periods",
-      "Resting periods",
+    clues: [
+      "These windows represent periods of heightened neural plasticity when environmental experience has maximal impact on circuit development.",
+      "Developmental periods of heightened neural sensitivity to experience.",
+      "Windows of heightened sensitivity when experience strongly shapes circuits are called this.",
     ],
-    explanation:
-      "For example, early visual experience is crucial for normal sight.",
+    answer: "Critical (sensitive) periods",
+    explanation: "For example, early visual experience is crucial for normal sight.",
   },
-
-  // ────────────── Infant, Child & Adolescent Brain ──────────────
   {
     id: "ic-1",
     chapter: "Infant, Child & Adolescent Brain",
-    question:
+    clues: [
+      "This region continues to develop and become myelinated into the mid-20s, explaining adolescent behavioral patterns.",
+      "The last major brain region to fully mature during development.",
       "Which brain region matures last, continuing into the mid-20s?",
-    answer: "The prefrontal cortex",
-    distractors: [
-      "The brainstem",
-      "The occipital lobe",
-      "The cerebellum",
     ],
-    explanation:
-      "Its late maturation is linked to adolescent risk-taking and impulsivity.",
+    answer: "The prefrontal cortex",
+    explanation: "Its late maturation is linked to adolescent risk-taking and impulsivity.",
   },
   {
     id: "ic-2",
     chapter: "Infant, Child & Adolescent Brain",
-    question:
-      "The brain's ability to change and reorganize with experience is called…",
+    clues: [
+      "This capacity allows the brain to form new connections and reorganize in response to learning and experience.",
+      "The brain's ability to physically reorganize with experience.",
+      "The brain's ability to change and reorganize with experience is called this.",
+    ],
     answer: "Neuroplasticity",
-    distractors: ["Homeostasis", "Myelination", "Apoptosis"],
-    explanation:
-      "Plasticity is greatest in childhood but continues throughout life.",
+    explanation: "Plasticity is greatest in childhood but continues throughout life.",
   },
   {
     id: "ic-3",
     chapter: "Infant, Child & Adolescent Brain",
-    question:
+    clues: [
+      "This structure develops earlier during adolescence than the regulatory prefrontal cortex, potentially explaining risky behavior.",
+      "Emotion-processing structure maturing before prefrontal cortex.",
       "During adolescence, which emotion-related structure develops earlier than the prefrontal cortex?",
-    answer: "The amygdala (limbic system)",
-    distractors: [
-      "The medulla",
-      "The corpus callosum",
-      "The pituitary",
     ],
-    explanation:
-      "This imbalance may make teens more emotionally reactive and reward-seeking.",
+    answer: "The amygdala (limbic system)",
+    explanation: "This imbalance may make teens more emotionally reactive and reward-seeking.",
   },
-
-  // ─────────────────── Adult & Aging Brain ───────────────────
   {
     id: "ag-1",
     chapter: "Adult & Aging Brain",
-    question:
+    clues: [
+      "This region continues to generate new neurons throughout adulthood, a process that may support cognitive flexibility.",
+      "One of only two brain regions where new neurons are formed in adults.",
       "In which region does neurogenesis continue in the adult human brain?",
-    answer: "The hippocampus",
-    distractors: [
-      "The frontal cortex",
-      "The cerebellum",
-      "The brainstem",
     ],
-    explanation:
-      "New neurons in the hippocampus are linked to learning and memory.",
+    answer: "The hippocampus",
+    explanation: "New neurons in the hippocampus are linked to learning and memory.",
   },
   {
     id: "ag-2",
     chapter: "Adult & Aging Brain",
-    question:
+    clues: [
+      "This activity increases neurogenesis, improves blood flow, and slows cognitive decline across the lifespan.",
+      "Aerobic activity is consistently linked to better brain aging.",
       "Which lifestyle factor is repeatedly linked to protecting the aging brain?",
-    answer: "Regular physical exercise",
-    distractors: [
-      "High sugar intake",
-      "Social isolation",
-      "Chronic sleep loss",
     ],
-    explanation:
-      "Exercise, mental engagement, and social activity support cognitive health.",
+    answer: "Regular physical exercise",
+    explanation: "Exercise, mental engagement, and social activity support cognitive health.",
   },
   {
     id: "ag-3",
     chapter: "Adult & Aging Brain",
-    question:
+    clues: [
+      "These information-processing abilities show earlier decline than accumulated knowledge and vocabulary.",
+      "Fluid intelligence declines more than crystallized intelligence.",
       "Normal aging tends to slow which ability the most?",
-    answer: "Processing speed and some memory retrieval",
-    distractors: [
-      "Vocabulary knowledge",
-      "Basic reflex arcs",
-      "Sense of smell only",
     ],
-    explanation:
-      "Well-learned knowledge (crystallized intelligence) is relatively preserved.",
+    answer: "Processing speed and some memory retrieval",
+    explanation: "Well-learned knowledge (crystallized intelligence) is relatively preserved.",
   },
-
-  // ───────────────────────── Brain States ─────────────────────────
   {
     id: "st-1",
     chapter: "Brain States",
-    question:
+    clues: [
+      "During this stage, the brain shows high arousal similar to waking, and dreaming is most vivid.",
+      "Sleep stage with rapid eye movements and vivid dreams.",
       "During which sleep stage do most vivid dreams and rapid eye movements occur?",
-    answer: "REM sleep",
-    distractors: [
-      "Stage 1 NREM",
-      "Slow-wave (deep) sleep",
-      "Wakefulness",
     ],
-    explanation:
-      "REM sleep is associated with vivid dreaming and memory consolidation.",
+    answer: "REM sleep",
+    explanation: "REM sleep is associated with vivid dreaming and memory consolidation.",
   },
   {
     id: "st-2",
     chapter: "Brain States",
-    question:
+    clues: [
+      "Released at night by the pineal gland, this hormone signals to the body that darkness has arrived.",
+      "A hormone signaling darkness and promoting sleep.",
       "Which hormone, released by the pineal gland, signals darkness and promotes sleep?",
+    ],
     answer: "Melatonin",
-    distractors: ["Cortisol", "Insulin", "Adrenaline"],
-    explanation:
-      "Melatonin rises in the evening as part of the sleep–wake cycle.",
+    explanation: "Melatonin rises in the evening as part of the sleep–wake cycle.",
   },
   {
     id: "st-3",
     chapter: "Brain States",
-    question:
+    clues: [
+      "Controlled by the suprachiasmatic nucleus and entrained by light signals from the retina.",
+      "The body's internal 24-hour biological clock.",
       "The roughly 24-hour internal clock governing sleep and wakefulness is the…",
-    answer: "Circadian rhythm",
-    distractors: [
-      "Ultradian rhythm",
-      "Reflex arc",
-      "Refractory period",
     ],
-    explanation:
-      "The suprachiasmatic nucleus of the hypothalamus is the master clock.",
+    answer: "Circadian rhythm",
+    explanation: "The suprachiasmatic nucleus of the hypothalamus is the master clock.",
   },
   {
     id: "st-4",
     chapter: "Brain States",
-    question:
+    clues: [
+      "During this sleep stage, slow-wave brain activity helps consolidate memories and restore physical tissues.",
+      "Deep, restorative sleep important for memory and physical recovery.",
       "Deep, slow-wave sleep is especially important for…",
-    answer: "Physical restoration and memory consolidation",
-    distractors: [
-      "Vivid dreaming",
-      "Rapid eye movements",
-      "Muscle paralysis",
     ],
-    explanation:
-      "Slow-wave sleep dominates early in the night.",
+    answer: "Physical restoration and memory consolidation",
+    explanation: "Slow-wave sleep dominates early in the night.",
   },
-
-  // ──────────────────── The Body in Balance ────────────────────
   {
     id: "bl-1",
     chapter: "The Body in Balance",
-    question:
+    clues: [
+      "This process involves dynamic regulation of many systems to maintain cellular environments within narrow ranges.",
+      "The body's tendency to maintain internal balance.",
       "The process of maintaining a stable internal environment is called…",
+    ],
     answer: "Homeostasis",
-    distractors: ["Metabolism", "Plasticity", "Apoptosis"],
-    explanation:
-      "The hypothalamus is a key regulator of homeostasis.",
+    explanation: "The hypothalamus is a key regulator of homeostasis.",
   },
   {
     id: "bl-2",
     chapter: "The Body in Balance",
-    question:
+    clues: [
+      "This small hypothalamic region connects to the anterior and posterior pituitary to coordinate hormonal release.",
+      "Brain structure linking nervous and endocrine systems.",
       "Which brain structure links the nervous system to the endocrine system via the pituitary gland?",
+    ],
     answer: "The hypothalamus",
-    distractors: ["The cerebellum", "The hippocampus", "The pons"],
-    explanation:
-      "It controls hunger, thirst, temperature, and hormone release.",
+    explanation: "It controls hunger, thirst, temperature, and hormone release.",
   },
   {
     id: "bl-3",
     chapter: "The Body in Balance",
-    question:
-      "Which division of the autonomic nervous system drives the 'fight-or-flight' response?",
-    answer: "The sympathetic nervous system",
-    distractors: [
-      "The parasympathetic nervous system",
-      "The somatic nervous system",
-      "The enteric nervous system",
+    clues: [
+      "Activated during stress, this system releases norepinephrine and epinephrine to prepare the body for action.",
+      "Autonomic nervous system division for arousal and mobilization.",
+      "Which division of the autonomic nervous system drives the fight-or-flight response?",
     ],
-    explanation:
-      "The parasympathetic system promotes 'rest-and-digest' functions.",
+    answer: "The sympathetic nervous system",
+    explanation: "The parasympathetic system promotes 'rest-and-digest' functions.",
   },
   {
     id: "bl-4",
     chapter: "The Body in Balance",
-    question:
+    clues: [
+      "Chronically elevated levels of this stress hormone can impair hippocampal function and suppress immune responses.",
+      "Stress hormone that can damage the hippocampus and brain function.",
       "Chronic stress keeps which hormone elevated, which can harm the brain over time?",
+    ],
     answer: "Cortisol",
-    distractors: ["Melatonin", "Dopamine", "Oxytocin"],
-    explanation:
-      "Prolonged high cortisol can impair the hippocampus and memory.",
+    explanation: "Prolonged high cortisol can impair the hippocampus and memory.",
   },
-
-  // ───────────────────── Childhood Disorders ─────────────────────
   {
     id: "cd-1",
     chapter: "Childhood Disorders",
-    question:
+    clues: [
+      "These domains include difficulty with social interaction, communication, and repetitive or restricted behaviors.",
+      "Primary domains of autism spectrum disorder.",
       "Autism spectrum disorder primarily affects which domains?",
-    answer: "Social communication and repetitive behaviors",
-    distractors: [
-      "Vision and hearing loss",
-      "Muscle wasting",
-      "Blood clotting",
     ],
-    explanation:
-      "ASD is a neurodevelopmental condition with a wide range of severity.",
+    answer: "Social communication and repetitive behaviors",
+    explanation: "ASD is a neurodevelopmental condition with a wide range of severity.",
   },
   {
     id: "cd-2",
     chapter: "Childhood Disorders",
-    question:
+    clues: [
+      "A persistent behavioral pattern of inattention and/or hyperactivity that interferes with function.",
+      "Persistent attention and behavior dysregulation characterizes this condition.",
       "ADHD is characterized by a persistent pattern of…",
-    answer: "Inattention and/or hyperactivity-impulsivity",
-    distractors: [
-      "Memory loss and tremor",
-      "Loss of vision",
-      "Progressive paralysis",
     ],
-    explanation:
-      "ADHD involves differences in attention and executive-function networks.",
+    answer: "Inattention and/or hyperactivity-impulsivity",
+    explanation: "ADHD involves differences in attention and executive-function networks.",
   },
   {
     id: "cd-3",
     chapter: "Childhood Disorders",
-    question:
+    clues: [
+      "This seizure disorder involves recurrent, spontaneous brain electrical disturbances.",
+      "Neurological disorder featuring unprovoked seizures.",
       "Which disorder involves recurrent, unprovoked seizures?",
+    ],
     answer: "Epilepsy",
-    distractors: ["Autism", "Dyslexia", "ADHD"],
-    explanation:
-      "Seizures result from abnormal, excessive electrical activity in the brain.",
+    explanation: "Seizures result from abnormal, excessive electrical activity in the brain.",
   },
-
-  // ──────────────────── Psychiatric Disorders ────────────────────
   {
     id: "ps-1",
     chapter: "Psychiatric Disorders",
-    question:
+    clues: [
+      "These monoamine neurotransmitter systems are dysregulated in depression.",
+      "Key neurotransmitter systems disrupted in depressive disorders.",
       "Major depression is associated with dysregulation of which neurotransmitters?",
-    answer: "Serotonin, norepinephrine, and dopamine",
-    distractors: [
-      "Acetylcholine and histamine only",
-      "Insulin and glucagon",
-      "Melatonin and cortisol only",
     ],
-    explanation:
-      "Many antidepressants act on serotonin and norepinephrine systems.",
+    answer: "Serotonin, norepinephrine, and dopamine",
+    explanation: "Many antidepressants act on serotonin and norepinephrine systems.",
   },
   {
     id: "ps-2",
     chapter: "Psychiatric Disorders",
-    question:
+    clues: [
+      "Overactivity in neurons using this neurotransmitter is implicated in the hallucinations and delusions of schizophrenia.",
+      "Excessive signaling by this neurotransmitter links to schizophrenic symptoms.",
       "Schizophrenia is strongly linked to overactivity of which neurotransmitter system?",
-    answer: "The dopamine system",
-    distractors: [
-      "The GABA system only",
-      "The insulin system",
-      "The melatonin system",
     ],
-    explanation:
-      "Antipsychotic drugs largely block dopamine receptors.",
+    answer: "The dopamine system",
+    explanation: "Antipsychotic drugs largely block dopamine receptors.",
   },
   {
     id: "ps-3",
     chapter: "Psychiatric Disorders",
-    question:
+    clues: [
+      "This condition features alternating episodes of elevated mood with high energy and depressed mood with low motivation.",
+      "Mood disorder with alternating emotional extremes.",
       "Which disorder features alternating episodes of mania and depression?",
-    answer: "Bipolar disorder",
-    distractors: [
-      "Generalized anxiety disorder",
-      "OCD",
-      "PTSD",
     ],
-    explanation:
-      "Mood stabilizers such as lithium are commonly used to treat it.",
+    answer: "Bipolar disorder",
+    explanation: "Mood stabilizers such as lithium are commonly used to treat it.",
   },
   {
     id: "ps-4",
     chapter: "Psychiatric Disorders",
-    question:
+    clues: [
+      "Intrusive thoughts drive repetitive behaviors that temporarily relieve the associated anxiety.",
+      "Condition combining uncontrollable thoughts with ritualistic behaviors.",
       "Persistent, intrusive thoughts paired with repetitive rituals characterize…",
-    answer: "Obsessive-compulsive disorder (OCD)",
-    distractors: [
-      "Schizophrenia",
-      "Bipolar disorder",
-      "Major depression",
     ],
-    explanation:
-      "OCD involves circuits linking the cortex, striatum, and thalamus.",
+    answer: "Obsessive-compulsive disorder (OCD)",
+    explanation: "OCD involves circuits linking the cortex, striatum, and thalamus.",
   },
-
-  // ───────────────────────── Addiction ─────────────────────────
   {
     id: "ad-1",
     chapter: "Addiction",
-    question:
+    clues: [
+      "This neurotransmitter is released in reward circuits throughout the brain in response to abused drugs.",
+      "Key neurotransmitter in reward pathway activated by addictive substances.",
       "Most addictive drugs increase which neurotransmitter in the brain's reward pathway?",
+    ],
     answer: "Dopamine",
-    distractors: ["GABA", "Acetylcholine", "Glutamate"],
-    explanation:
-      "The mesolimbic dopamine pathway signals reward and reinforcement.",
+    explanation: "The mesolimbic dopamine pathway signals reward and reinforcement.",
   },
   {
     id: "ad-2",
     chapter: "Addiction",
-    question:
+    clues: [
+      "This ventral striatal region is activated by rewarding stimuli and is a target of many addictive drugs.",
+      "Central hub of reward circuitry in the limbic system.",
       "Which structure is a key hub of the brain's reward circuit?",
-    answer: "The nucleus accumbens",
-    distractors: [
-      "The cerebellum",
-      "The occipital cortex",
-      "The medulla",
     ],
-    explanation:
-      "It receives dopamine from the ventral tegmental area (VTA).",
+    answer: "The nucleus accumbens",
+    explanation: "It receives dopamine from the ventral tegmental area (VTA).",
   },
   {
     id: "ad-3",
     chapter: "Addiction",
-    question:
+    clues: [
+      "This adaptation requires escalating doses to achieve the same pharmacological effect.",
+      "Physical adaptation to chronic drug use reducing drug effectiveness.",
       "Needing more of a drug to get the same effect is called…",
+    ],
     answer: "Tolerance",
-    distractors: ["Withdrawal", "Sensitization", "Homeostasis"],
-    explanation:
-      "Tolerance reflects the brain adapting to repeated drug exposure.",
+    explanation: "Tolerance reflects the brain adapting to repeated drug exposure.",
   },
-
-  // ─────────────────────── Injury & Illness ───────────────────────
   {
     id: "in-1",
     chapter: "Injury & Illness",
-    question:
+    clues: [
+      "This sudden cessation of oxygen-rich blood supply leads to rapid neuron death within minutes.",
+      "Disruption of blood and oxygen delivery to brain tissue.",
       "A stroke occurs when what is disrupted to part of the brain?",
-    answer: "Blood supply (and thus oxygen)",
-    distractors: [
-      "Cerebrospinal fluid only",
-      "Electrical grounding",
-      "Myelin production",
     ],
-    explanation:
-      "Ischemic strokes block a vessel; hemorrhagic strokes involve bleeding.",
+    answer: "Blood supply (and thus oxygen)",
+    explanation: "Ischemic strokes block a vessel; hemorrhagic strokes involve bleeding.",
   },
   {
     id: "in-2",
     chapter: "Injury & Illness",
-    question:
+    clues: [
+      "This form of traumatic brain injury can cause temporary disruption of brain activity or permanent cellular damage.",
+      "Head trauma causing brain injury and functional impairment.",
       "A concussion is a form of which injury?",
-    answer: "Traumatic brain injury (TBI)",
-    distractors: [
-      "Neurodegenerative disease",
-      "Autoimmune disease",
-      "Genetic disorder",
     ],
-    explanation:
-      "Concussions result from a blow or jolt that disrupts brain function.",
+    answer: "Traumatic brain injury (TBI)",
+    explanation: "Concussions result from a blow or jolt that disrupts brain function.",
   },
   {
     id: "in-3",
     chapter: "Injury & Illness",
-    question:
+    clues: [
+      "The autoimmune attack on this structure causes demyelination and slowed neural conduction.",
+      "Protective fatty sheath attacked by the immune system.",
       "In multiple sclerosis, the immune system attacks what part of neurons?",
-    answer: "The myelin sheath",
-    distractors: [
-      "The cell nucleus",
-      "The synaptic vesicles",
-      "The dendritic spines",
     ],
-    explanation:
-      "Loss of myelin slows or blocks nerve signal transmission.",
+    answer: "The myelin sheath",
+    explanation: "Loss of myelin slows or blocks nerve signal transmission.",
   },
   {
     id: "in-4",
     chapter: "Injury & Illness",
-    question:
+    clues: [
+      "These thin tissue layers are composed of the dura mater, arachnoid, and pia mater.",
+      "Protective tissue layers surrounding the central nervous system.",
       "Which protective membranes surround the brain and spinal cord?",
-    answer: "The meninges",
-    distractors: [
-      "The pleura",
-      "The pericardium",
-      "The peritoneum",
     ],
-    explanation:
-      "Inflammation of the meninges is called meningitis.",
+    answer: "The meninges",
+    explanation: "Inflammation of the meninges is called meningitis.",
   },
-
-  // ─────────────── Neurodegenerative Diseases ───────────────
   {
     id: "nd-1",
     chapter: "Neurodegenerative Diseases",
-    question:
+    clues: [
+      "These two proteins accumulate as extracellular plaques and intracellular tangles in the brains of Alzheimer's patients.",
+      "Pathological protein aggregates found in Alzheimer's neuropathology.",
       "Alzheimer's disease is associated with which two abnormal protein deposits?",
-    answer: "Amyloid-beta plaques and tau tangles",
-    distractors: [
-      "Lewy bodies and prions",
-      "Myelin plaques and clots",
-      "Collagen and fibrin",
     ],
-    explanation:
-      "These deposits disrupt neuron function, especially in memory regions.",
+    answer: "Amyloid-beta plaques and tau tangles",
+    explanation: "These deposits disrupt neuron function, especially in memory regions.",
   },
   {
     id: "nd-2",
     chapter: "Neurodegenerative Diseases",
-    question:
+    clues: [
+      "This neurotransmitter is normally produced in the substantia nigra, and its loss causes motor symptoms.",
+      "Neurotransmitter deficiency in the midbrain motor control region.",
       "Parkinson's disease results from the loss of neurons that produce…",
-    answer: "Dopamine (in the substantia nigra)",
-    distractors: [
-      "Serotonin",
-      "Acetylcholine",
-      "GABA",
     ],
-    explanation:
-      "Dopamine loss causes tremor, rigidity, and slowed movement.",
+    answer: "Dopamine (in the substantia nigra)",
+    explanation: "Dopamine loss causes tremor, rigidity, and slowed movement.",
   },
   {
     id: "nd-3",
     chapter: "Neurodegenerative Diseases",
-    question:
+    clues: [
+      "This disorder results from an expansion of trinucleotide repeats in a single gene.",
+      "Single-gene disorder with expanding DNA repeat mutations.",
       "Huntington's disease is caused by what kind of underlying defect?",
-    answer: "A single inherited gene mutation",
-    distractors: [
-      "A viral infection",
-      "A vitamin deficiency",
-      "A head injury",
     ],
-    explanation:
-      "It is an autosomal dominant disorder caused by an expanded CAG repeat.",
+    answer: "A single inherited gene mutation",
+    explanation: "It is an autosomal dominant disorder caused by an expanded CAG repeat.",
   },
   {
     id: "nd-4",
     chapter: "Neurodegenerative Diseases",
-    question:
+    clues: [
+      "The voluntary motor neurons connecting brain to muscles degenerate and die in this disease.",
+      "Neurons controlling voluntary movement die in this disease.",
       "ALS (Lou Gehrig's disease) primarily destroys which cells?",
-    answer: "Motor neurons",
-    distractors: [
-      "Photoreceptors",
-      "Astrocytes",
-      "Hippocampal neurons",
     ],
-    explanation:
-      "Degeneration of motor neurons leads to progressive muscle weakness.",
+    answer: "Motor neurons",
+    explanation: "Degeneration of motor neurons leads to progressive muscle weakness.",
   },
-
-  // ─────────────────────── Kinds of Research ───────────────────────
   {
     id: "kr-1",
     chapter: "Kinds of Research",
-    question:
+    clues: [
+      "This imaging technique measures neural activity indirectly by detecting changes in blood oxygen levels.",
+      "Brain imaging method based on blood oxygenation changes.",
       "Which imaging method measures brain activity via blood-oxygen changes?",
-    answer: "Functional MRI (fMRI)",
-    distractors: [
-      "X-ray",
-      "Ultrasound",
-      "Electromyography",
     ],
-    explanation:
-      "fMRI uses the BOLD signal as an indirect indicator of neural activity.",
+    answer: "Functional MRI (fMRI)",
+    explanation: "fMRI uses the BOLD signal as an indirect indicator of neural activity.",
   },
   {
     id: "kr-2",
     chapter: "Kinds of Research",
-    question:
+    clues: [
+      "Electrodes placed on the scalp detect the net electrical activity of large neuron populations.",
+      "Records electrical brain activity from scalp surface electrodes.",
       "Which technique records the brain's electrical activity from the scalp?",
-    answer: "Electroencephalography (EEG)",
-    distractors: [
-      "CT scan",
-      "PET scan",
-      "MRI",
     ],
-    explanation:
-      "EEG has excellent time resolution, useful for studying sleep and seizures.",
+    answer: "Electroencephalography (EEG)",
+    explanation: "EEG has excellent time resolution, useful for studying sleep and seizures.",
   },
   {
     id: "kr-3",
     chapter: "Kinds of Research",
-    question:
+    clues: [
+      "This technique uses light to activate genetically modified neurons expressing light-sensitive ion channels.",
+      "Light-based control of genetically modified neural activity.",
       "Using light to control genetically modified neurons is called…",
-    answer: "Optogenetics",
-    distractors: [
-      "Electrophysiology",
-      "Immunohistochemistry",
-      "Microdialysis",
     ],
-    explanation:
-      "Optogenetics lets researchers turn specific neurons on or off with light.",
+    answer: "Optogenetics",
+    explanation: "Optogenetics lets researchers turn specific neurons on or off with light.",
   },
-
-  // ──────────────────── Solving Human Problems ────────────────────
   {
     id: "sh-1",
     chapter: "Solving Human Problems",
-    question:
+    clues: [
+      "This technology translates brain signals into commands that control external devices or prosthetic limbs.",
+      "Device enabling brain control of external assistive technology.",
       "A device that lets the brain control a computer or prosthetic directly is a…",
-    answer: "Brain-machine (brain-computer) interface",
-    distractors: [
-      "Pacemaker",
-      "Cochlear amplifier",
-      "Defibrillator",
     ],
-    explanation:
-      "BMIs can restore communication or movement for people with paralysis.",
+    answer: "Brain-machine (brain-computer) interface",
+    explanation: "BMIs can restore communication or movement for people with paralysis.",
   },
   {
     id: "sh-2",
     chapter: "Solving Human Problems",
-    question:
+    clues: [
+      "This prosthetic device stimulates the auditory nerve by converting sound into electrical signals.",
+      "Prosthetic device restoring hearing sensation through nerve stimulation.",
       "Which implant can restore a sense of hearing by stimulating the auditory nerve?",
-    answer: "A cochlear implant",
-    distractors: [
-      "A retinal implant",
-      "A deep-brain stimulator",
-      "A vagus nerve stimulator",
     ],
-    explanation:
-      "Cochlear implants bypass damaged hair cells to stimulate the nerve directly.",
+    answer: "A cochlear implant",
+    explanation: "Cochlear implants bypass damaged hair cells to stimulate the nerve directly.",
   },
   {
     id: "sh-3",
     chapter: "Solving Human Problems",
-    question:
+    clues: [
+      "Electrical stimulation of this structure can suppress tremor and other motor symptoms.",
+      "Established surgical treatment for movement disorder symptoms.",
       "Deep brain stimulation is an established treatment for the motor symptoms of…",
-    answer: "Parkinson's disease",
-    distractors: [
-      "Multiple sclerosis",
-      "Alzheimer's disease",
-      "Stroke",
     ],
-    explanation:
-      "Electrodes deliver pulses to targets such as the subthalamic nucleus.",
+    answer: "Parkinson's disease",
+    explanation: "Electrodes deliver pulses to targets such as the subthalamic nucleus.",
   },
-
-  // ─────────────────── Neuroscience in Society ───────────────────
   {
     id: "ns-1",
     chapter: "Neuroscience in Society",
-    question:
+    clues: [
+      "This field examines the ethical implications and consequences of neuroscience research and applications.",
+      "Field addressing ethical questions raised by brain science.",
       "The field examining ethical issues raised by neuroscience is called…",
-    answer: "Neuroethics",
-    distractors: [
-      "Neuroeconomics",
-      "Neurolinguistics",
-      "Neuropathology",
     ],
-    explanation:
-      "Neuroethics addresses privacy, enhancement, and responsibility questions.",
+    answer: "Neuroethics",
+    explanation: "Neuroethics addresses privacy, enhancement, and responsibility questions.",
   },
   {
     id: "ns-2",
     chapter: "Neuroscience in Society",
-    question:
+    clues: [
+      "This nonprofit organization of nearly 37,000 neuroscientists published the foundational \"Brain Facts\" primer.",
+      "Organization of neuroscientists publishing educational materials.",
       "Which organization publishes the Brain Facts book?",
-    answer: "The Society for Neuroscience (SfN)",
-    distractors: [
-      "The World Health Organization",
-      "The National Rifle Association",
-      "The American Medical Association",
     ],
-    explanation:
-      "SfN is the world's largest organization of brain researchers.",
+    answer: "The Society for Neuroscience (SfN)",
+    explanation: "SfN is the world's largest organization of brain researchers.",
   },
-
-  // ───────────── Additional Brain Bee verbal Q&A (supplement) ─────────────
   {
     id: "xb-1",
     chapter: "Brain Basics",
-    question:
-      "Roughly how many neurons are in the adult human brain (order of magnitude)?",
+    clues: [
+      "Approximately this many individual neurons make up the human brain and collectively enable all cognition.",
+      "Order-of-magnitude estimate of adult human brain neurons.",
+      "Roughly how many neurons are in the adult human brain?",
+    ],
     answer: "About 86 billion",
-    distractors: ["About 1 million", "About 500 thousand", "About 10 trillion"],
-    explanation:
-      "Estimates put the human brain at roughly 86 billion neurons.",
+    explanation: "Estimates put the human brain at roughly 86 billion neurons.",
   },
   {
     id: "xb-2",
     chapter: "Brain Basics",
-    question:
+    clues: [
+      "This branched dendritic projection collects incoming chemical signals from other neurons.",
+      "Branched extension of a neuron receiving signals.",
       "What is the branch of a neuron that receives incoming signals called?",
+    ],
     answer: "The dendrite",
-    distractors: ["The axon", "The soma", "The synapse"],
-    explanation:
-      "Dendrites receive signals; the axon carries the output away from the cell body.",
+    explanation: "Dendrites receive signals; the axon carries the output away from the cell body.",
   },
   {
     id: "xb-3",
     chapter: "Brain Basics",
-    question:
+    clues: [
+      "This is the typical electrical potential difference across the resting neuronal membrane.",
+      "Resting electrical voltage across the neuronal cell membrane.",
       "What is the resting membrane potential of a typical neuron?",
+    ],
     answer: "About −70 millivolts",
-    distractors: ["About +40 millivolts", "0 millivolts", "About −20 millivolts"],
-    explanation:
-      "The inside of a resting neuron is negative relative to the outside.",
+    explanation: "The inside of a resting neuron is negative relative to the outside.",
   },
   {
     id: "xb-4",
     chapter: "Brain Basics",
-    question:
+    clues: [
+      "This principle describes how neurons respond with maximal strength or no response at all to stimuli.",
+      "Principle that neurons fire completely or not at all.",
       "The principle that a neuron either fires a full action potential or none at all is called…",
-    answer: "The all-or-none principle",
-    distractors: [
-      "The refractory principle",
-      "Saltatory conduction",
-      "Temporal summation",
     ],
-    explanation:
-      "Action potential amplitude does not vary with stimulus strength once threshold is reached.",
+    answer: "The all-or-none principle",
+    explanation: "Action potential amplitude does not vary with stimulus strength once threshold is reached.",
   },
   {
     id: "xb-5",
     chapter: "Brain Basics",
-    question:
+    clues: [
+      "Action potentials rapidly jump between exposed regions on myelinated axons called Nodes of Ranvier.",
+      "Rapid signal conduction along myelinated axons.",
       "Rapid signal jumping between nodes of Ranvier on myelinated axons is called…",
-    answer: "Saltatory conduction",
-    distractors: [
-      "Continuous conduction",
-      "Retrograde transport",
-      "Synaptic summation",
     ],
-    explanation:
-      "Myelin gaps (nodes of Ranvier) let the impulse 'leap' and travel faster.",
+    answer: "Saltatory conduction",
+    explanation: "Myelin gaps (nodes of Ranvier) let the impulse 'leap' and travel faster.",
   },
   {
     id: "xb-6",
     chapter: "Brain Basics",
-    question:
-      "Which ion rushing into the neuron drives the rising (depolarization) phase of the action potential?",
+    clues: [
+      "This cation rushes into the neuron during the rising phase, depolarizing the membrane potential.",
+      "Ion flowing inward to depolarize the neuron during action potential.",
+      "Which ion rushing into the neuron drives the rising phase of the action potential?",
+    ],
     answer: "Sodium (Na⁺)",
-    distractors: ["Potassium (K⁺)", "Chloride (Cl⁻)", "Calcium (Ca²⁺)"],
-    explanation:
-      "Potassium (K⁺) leaving the cell then drives repolarization.",
+    explanation: "Potassium (K⁺) leaving the cell then drives repolarization.",
   },
   {
     id: "xb-7",
     chapter: "Brain Basics",
-    question:
+    clues: [
+      "This ion's influx at the axon terminal opens vesicles, releasing neurotransmitter molecules.",
+      "Ion influx triggering neurotransmitter vesicle release.",
       "Which ion's influx into the axon terminal triggers neurotransmitter release?",
+    ],
     answer: "Calcium (Ca²⁺)",
-    distractors: ["Sodium (Na⁺)", "Potassium (K⁺)", "Magnesium (Mg²⁺)"],
-    explanation:
-      "Calcium entry causes synaptic vesicles to fuse and release neurotransmitter.",
+    explanation: "Calcium entry causes synaptic vesicles to fuse and release neurotransmitter.",
   },
   {
     id: "xb-8",
     chapter: "Brain Basics",
-    question:
+    clues: [
+      "More numerous than neurons in some brain regions, these cells provide structural and metabolic support.",
+      "Support cells of the nervous system providing vital functions.",
       "What are the most abundant support cells of the nervous system called?",
+    ],
     answer: "Glial cells (glia)",
-    distractors: ["Neurons", "Myocytes", "Osteocytes"],
-    explanation:
-      "Types include astrocytes, oligodendrocytes, microglia, and Schwann cells.",
+    explanation: "Types include astrocytes, oligodendrocytes, microglia, and Schwann cells.",
   },
   {
     id: "xb-9",
     chapter: "Brain Basics",
-    question:
+    clues: [
+      "These resident immune cells originate from a different lineage and act as brain phagocytes.",
+      "Immune-competent glial cells of the brain.",
       "Which glial cells act as the brain's resident immune defense?",
+    ],
     answer: "Microglia",
-    distractors: ["Astrocytes", "Oligodendrocytes", "Ependymal cells"],
-    explanation:
-      "Microglia clear debris and pathogens in the central nervous system.",
+    explanation: "Microglia clear debris and pathogens in the central nervous system.",
   },
   {
     id: "xb-10",
     chapter: "Brain Basics",
-    question:
+    clues: [
+      "These oligodendrocytes wrap their membranes around multiple axons to create insulating myelin sheaths.",
+      "Glial cells that myelinate central nervous system axons.",
       "Which glial cells myelinate axons in the central nervous system?",
+    ],
     answer: "Oligodendrocytes",
-    distractors: ["Schwann cells", "Astrocytes", "Microglia"],
-    explanation:
-      "In the peripheral nervous system, Schwann cells provide myelin instead.",
+    explanation: "In the peripheral nervous system, Schwann cells provide myelin instead.",
   },
   {
     id: "xb-11",
     chapter: "Brain Basics",
-    question:
+    clues: [
+      "Tightly packed endothelial cells and associated glial cells restrict the passage of most bloodborne molecules.",
+      "Selective barrier protecting the brain from blood-borne substances.",
       "The selective barrier that shields the brain from many bloodborne substances is the…",
+    ],
     answer: "Blood–brain barrier",
-    distractors: ["Meninges", "Pia mater", "Choroid plexus"],
-    explanation:
-      "Tight junctions between capillary cells restrict what enters brain tissue.",
+    explanation: "Tight junctions between capillary cells restrict what enters brain tissue.",
   },
   {
     id: "xb-12",
     chapter: "Brain Basics",
-    question:
+    clues: [
+      "This clear fluid is produced by ependymal cells and fills the ventricular system.",
+      "Clear fluid providing mechanical protection and nutrient transport.",
       "The clear fluid that cushions the brain and fills the ventricles is…",
+    ],
     answer: "Cerebrospinal fluid (CSF)",
-    distractors: ["Plasma", "Lymph", "Vitreous humor"],
-    explanation:
-      "CSF is produced largely by the choroid plexus and cushions the CNS.",
+    explanation: "CSF is produced largely by the choroid plexus and cushions the CNS.",
   },
   {
     id: "xb-13",
     chapter: "Brain Basics",
-    question: "How many pairs of cranial nerves are there?",
+    clues: [
+      "These bilateral nerve pairs exit the brainstem and supply the head and neck regions.",
+      "Paired nerves extending from the brainstem.",
+      "How many pairs of cranial nerves are there?",
+    ],
     answer: "12 pairs",
-    distractors: ["10 pairs", "31 pairs", "8 pairs"],
-    explanation:
-      "There are 12 pairs of cranial nerves and 31 pairs of spinal nerves.",
+    explanation: "There are 12 pairs of cranial nerves and 31 pairs of spinal nerves.",
   },
   {
     id: "xb-14",
     chapter: "Brain Basics",
-    question:
-      "Which is the longest cranial nerve, controlling many organs and 'rest-and-digest' functions?",
-    answer: "The vagus nerve (CN X)",
-    distractors: [
-      "The optic nerve (CN II)",
-      "The trigeminal nerve (CN V)",
-      "The facial nerve (CN VII)",
+    clues: [
+      "This longest cranial nerve extends from the brainstem all the way to the abdomen controlling parasympathetic functions.",
+      "Longest cranial nerve with widespread body projections.",
+      "Which is the longest cranial nerve, controlling many organs and rest-and-digest functions?",
     ],
-    explanation:
-      "The vagus nerve is a major parasympathetic pathway to the heart and gut.",
+    answer: "The vagus nerve (CN X)",
+    explanation: "The vagus nerve is a major parasympathetic pathway to the heart and gut.",
   },
   {
     id: "xb-15",
     chapter: "Brain Basics",
-    question:
+    clues: [
+      "One controls voluntary skeletal muscles while the other regulates involuntary organs and glands.",
+      "Two functional divisions of the peripheral nervous system.",
       "The peripheral nervous system is divided into which two functional systems?",
-    answer: "Somatic and autonomic",
-    distractors: [
-      "Sympathetic and parasympathetic",
-      "Central and peripheral",
-      "Sensory and motor only",
     ],
-    explanation:
-      "The autonomic system further divides into sympathetic and parasympathetic.",
+    answer: "Somatic and autonomic",
+    explanation: "The autonomic system further divides into sympathetic and parasympathetic.",
   },
   {
     id: "xb-16",
     chapter: "Brain Basics",
-    question:
+    clues: [
+      "This amino acid neurotransmitter is the predominant excitatory signal in the mammalian brain.",
+      "Primary excitatory neurotransmitter in cortical circuits.",
       "The main excitatory neurotransmitter in the brain is…",
+    ],
     answer: "Glutamate",
-    distractors: ["GABA", "Dopamine", "Acetylcholine"],
-    explanation:
-      "Glutamate excites neurons; GABA is the main inhibitory neurotransmitter.",
+    explanation: "Glutamate excites neurons; GABA is the main inhibitory neurotransmitter.",
   },
   {
     id: "xb-17",
     chapter: "Brain Basics",
-    question:
+    clues: [
+      "This amino acid neurotransmitter acts like a brake pedal on neurons, hyperpolarizing their membranes.",
+      "Primary inhibitory neurotransmitter suppressing neural activity.",
       "The main inhibitory neurotransmitter in the adult brain is…",
+    ],
     answer: "GABA",
-    distractors: ["Glutamate", "Norepinephrine", "Serotonin"],
-    explanation:
-      "GABA reduces the likelihood that a neuron will fire; many sedatives enhance it.",
+    explanation: "GABA reduces the likelihood that a neuron will fire; many sedatives enhance it.",
   },
   {
     id: "xb-18",
     chapter: "The Body in Balance",
-    question:
-      "Which neurotransmitter do most sympathetic 'fight-or-flight' target neurons release?",
+    clues: [
+      "Released by sympathetic neurons at target organs, this neurotransmitter mediates arousal responses.",
+      "Sympathetic nervous system neurotransmitter.",
+      "Which neurotransmitter do most sympathetic fight-or-flight target neurons release?",
+    ],
     answer: "Norepinephrine",
-    distractors: ["Acetylcholine", "GABA", "Serotonin"],
-    explanation:
-      "The adrenal medulla also releases epinephrine into the bloodstream.",
+    explanation: "The adrenal medulla also releases epinephrine into the bloodstream.",
   },
   {
     id: "xb-19",
     chapter: "The Body in Balance",
-    question:
+    clues: [
+      "This hormone is released during social bonding, childbirth, and breastfeeding.",
+      "Hormone associated with bonding, trust, and maternal behaviors.",
       "Which hormone, linked to bonding and trust, is released during childbirth and nursing?",
+    ],
     answer: "Oxytocin",
-    distractors: ["Cortisol", "Insulin", "Melatonin"],
-    explanation:
-      "Oxytocin is produced in the hypothalamus and released via the pituitary.",
+    explanation: "Oxytocin is produced in the hypothalamus and released via the pituitary.",
   },
   {
     id: "xb-20",
     chapter: "Senses & Perception",
-    question:
-      "The point where the optic nerve exits the eye, creating a natural blind spot, is the…",
+    clues: [
+      "This point where the optic nerve's axons exit the retina creates a natural blind spot in vision.",
+      "Exit point of optic nerve creating visual blind spot.",
+      "The point where the optic nerve exits the eye is the…",
+    ],
     answer: "Optic disc",
-    distractors: ["Fovea", "Macula", "Ora serrata"],
-    explanation:
-      "The optic disc has no photoreceptors, producing a blind spot.",
+    explanation: "The optic disc has no photoreceptors, producing a blind spot.",
   },
   {
     id: "xb-21",
     chapter: "Senses & Perception",
-    question:
+    clues: [
+      "Located in the center of the retina, this region has the highest concentration of cones.",
+      "Central retinal region with highest visual acuity.",
       "The small central retinal region of sharpest, most detailed vision is the…",
+    ],
     answer: "Fovea",
-    distractors: ["Optic disc", "Sclera", "Ciliary body"],
-    explanation:
-      "The fovea is densely packed with cones for high-acuity vision.",
+    explanation: "The fovea is densely packed with cones for high-acuity vision.",
   },
   {
     id: "xb-22",
     chapter: "Senses & Perception",
-    question:
+    clues: [
+      "These three fluid-filled semicircular tubes detect rotational movements of the head.",
+      "Inner-ear structures detecting angular head movements.",
       "Which inner-ear structures sense head rotation to help maintain balance?",
+    ],
     answer: "The semicircular canals",
-    distractors: ["The cochlea", "The eardrum", "The ossicles"],
-    explanation:
-      "The vestibular system includes the semicircular canals and otolith organs.",
+    explanation: "The vestibular system includes the semicircular canals and otolith organs.",
   },
   {
     id: "xb-23",
     chapter: "Learning, Memory & Emotions",
-    question:
-      "The weakening of synaptic connections, complementary to LTP, is called…",
-    answer: "Long-term depression (LTD)",
-    distractors: [
-      "Long-term potentiation",
-      "Habituation",
-      "Sensitization",
+    clues: [
+      "This process is the mirror image of long-term potentiation, involving decreased synaptic strength.",
+      "Weakening of synaptic connections following activity.",
+      "The weakening of synaptic connections is called memory…",
     ],
-    explanation:
-      "LTP and LTD together tune synaptic strength during learning.",
+    answer: "Long-term depression (LTD)",
+    explanation: "LTP and LTD together tune synaptic strength during learning.",
   },
   {
     id: "xb-24",
     chapter: "Learning, Memory & Emotions",
-    question:
+    clues: [
+      "These neurons are active both when an individual performs an action and when they observe another performing it.",
+      "Neurons firing during both action execution and action observation.",
       "Neurons that fire both when performing an action and when watching it are called…",
+    ],
     answer: "Mirror neurons",
-    distractors: ["Place cells", "Pyramidal cells", "Purkinje cells"],
-    explanation:
-      "Mirror neurons are implicated in imitation and understanding others' actions.",
+    explanation: "Mirror neurons are implicated in imitation and understanding others' actions.",
   },
   {
     id: "xb-25",
     chapter: "Learning, Memory & Emotions",
-    question:
-      "Stabilizing a new memory over time, partly during sleep, is called memory…",
+    clues: [
+      "This process stabilizes new memories over time through molecular changes and sleep-dependent processes.",
+      "Process stabilizing and strengthening new memories.",
+      "Stabilizing a new memory over time is called memory…",
+    ],
     answer: "Consolidation",
-    distractors: ["Encoding", "Retrieval", "Extinction"],
-    explanation:
-      "Consolidation gradually transfers memories toward long-term storage.",
+    explanation: "Consolidation gradually transfers memories toward long-term storage.",
   },
   {
     id: "xb-26",
     chapter: "Thinking, Planning & Language",
-    question:
+    clues: [
+      "This language deficit results from brain damage affecting speech comprehension or production.",
+      "Language impairment from neurological damage.",
       "Loss of language ability due to brain damage is called…",
+    ],
     answer: "Aphasia",
-    distractors: ["Apraxia", "Agnosia", "Ataxia"],
-    explanation:
-      "Broca's (non-fluent) and Wernicke's (fluent) aphasias affect different areas.",
+    explanation: "Broca's (non-fluent) and Wernicke's (fluent) aphasias affect different areas.",
   },
   {
     id: "xb-27",
     chapter: "Movement",
-    question:
-      "The band of cortex just behind the frontal lobe that maps voluntary movement is organized as a…",
-    answer: "Motor homunculus",
-    distractors: [
-      "Sensory homunculus",
-      "Tonotopic map",
-      "Retinotopic map",
+    clues: [
+      "This cortical map represents body parts with distorted proportions reflecting motor control importance.",
+      "Somatotopic map of motor cortex.",
+      "The band of cortex organizing voluntary movement is arranged as a…",
     ],
-    explanation:
-      "Body parts needing fine control (hands, face) get disproportionately large map areas.",
+    answer: "Motor homunculus",
+    explanation: "Body parts needing fine control (hands, face) get disproportionately large map areas.",
   },
   {
     id: "xb-28",
     chapter: "Brain States",
-    question:
+    clues: [
+      "This small hypothalamic nucleus contains the master circadian oscillator and receives direct retinal input.",
+      "Master circadian clock in the hypothalamus.",
       "Which small hypothalamic region acts as the body's master circadian clock?",
-    answer: "The suprachiasmatic nucleus (SCN)",
-    distractors: [
-      "The pineal gland",
-      "The pituitary gland",
-      "The substantia nigra",
     ],
-    explanation:
-      "The SCN synchronizes body rhythms to the light–dark cycle.",
+    answer: "The suprachiasmatic nucleus (SCN)",
+    explanation: "The SCN synchronizes body rhythms to the light–dark cycle.",
   },
   {
     id: "xb-29",
     chapter: "Injury & Illness",
-    question:
+    clues: [
+      "This type of stroke occurs when a blood vessel ruptures and bleeds into brain tissue.",
+      "Stroke caused by blood vessel rupture.",
       "The two broad categories of stroke are ischemic and…",
+    ],
     answer: "Hemorrhagic",
-    distractors: ["Traumatic", "Ischemic-lacunar only", "Metabolic"],
-    explanation:
-      "Ischemic strokes block blood flow; hemorrhagic strokes involve bleeding.",
+    explanation: "Ischemic strokes block blood flow; hemorrhagic strokes involve bleeding.",
   },
   {
     id: "xb-30",
     chapter: "Injury & Illness",
-    question:
+    clues: [
+      "Infection of these protective membranes causes inflammation and can lead to serious neurological damage.",
+      "Infection of protective brain membranes.",
       "Inflammation of the protective membranes around the brain and spinal cord is called…",
+    ],
     answer: "Meningitis",
-    distractors: ["Encephalitis", "Myelitis", "Neuritis"],
-    explanation:
-      "Meningitis can be caused by bacterial or viral infection.",
+    explanation: "Meningitis can be caused by bacterial or viral infection.",
   },
   {
     id: "xb-31",
     chapter: "Neurodegenerative Diseases",
-    question:
+    clues: [
+      "These protein clumps composed primarily of alpha-synuclein accumulate inside neurons.",
+      "Pathological protein aggregates in Parkinson's disease.",
       "The abnormal protein clumps found inside neurons in Parkinson's disease are called…",
-    answer: "Lewy bodies",
-    distractors: [
-      "Amyloid plaques",
-      "Neurofibrillary tangles",
-      "Prion aggregates",
     ],
-    explanation:
-      "Lewy bodies contain aggregated alpha-synuclein protein.",
+    answer: "Lewy bodies",
+    explanation: "Lewy bodies contain aggregated alpha-synuclein protein.",
   },
   {
     id: "xb-32",
     chapter: "Kinds of Research",
-    question:
+    clues: [
+      "This noninvasive technique uses brief magnetic pulses to induce electrical currents in the brain.",
+      "Noninvasive magnetic brain stimulation technique.",
       "Which non-invasive method uses magnetic pulses to stimulate or suppress cortical activity?",
-    answer: "Transcranial magnetic stimulation (TMS)",
-    distractors: [
-      "Functional MRI",
-      "Electroencephalography",
-      "Positron emission tomography",
     ],
-    explanation:
-      "TMS can transiently activate or disrupt a targeted brain region.",
+    answer: "Transcranial magnetic stimulation (TMS)",
+    explanation: "TMS can transiently activate or disrupt a targeted brain region.",
   },
   {
     id: "xb-33",
     chapter: "Kinds of Research",
-    question:
-      "The 'father of modern neuroscience,' who drew neurons and proposed the neuron doctrine, was…",
-    answer: "Santiago Ramón y Cajal",
-    distractors: [
-      "Camillo Golgi",
-      "Phineas Gage",
-      "Charles Sherrington",
+    clues: [
+      "This pioneering neuroscientist drew detailed pictures of individual neurons and proposed they were separate cells.",
+      "Pioneer neuroscientist establishing the neuron doctrine.",
+      "The father of modern neuroscience, who drew neurons and proposed the neuron doctrine, was…",
     ],
-    explanation:
-      "Cajal argued neurons are discrete cells; he shared the 1906 Nobel Prize with Golgi.",
+    answer: "Santiago Ramón y Cajal",
+    explanation: "Cajal argued neurons are discrete cells; he shared the 1906 Nobel Prize with Golgi.",
+  },
+  {
+    id: "bf-1",
+    chapter: "Brain Basics",
+    clues: [
+      "Approximately this many individual nerve cells comprise the adult human brain.",
+      "Estimated count of adult brain neurons.",
+      "How many neurons are in the adult human brain?",
+    ],
+    answer: "About 86 billion",
+    explanation: "The text states the human brain contains roughly 86 billion neurons.",
+  },
+  {
+    id: "bf-2",
+    chapter: "Brain Basics",
+    clues: [
+      "This proportion of brain neurons use excitatory neurotransmitters to activate other neurons.",
+      "Percentage of brain neurons that are excitatory.",
+      "What percentage of brain neurons are excitatory?",
+    ],
+    answer: "About 80 percent",
+    explanation: "The text indicates that about 80 percent of neurons in the brain are excitatory.",
+  },
+  {
+    id: "bf-3",
+    chapter: "Brain Basics",
+    clues: [
+      "The central nervous system contains these four main glial cell types.",
+      "Four types of support cells in the brain.",
+      "What are the four main types of glial cells in the CNS?",
+    ],
+    answer: "Astrocytes, microglia, ependymal, oligodendrocytes",
+    explanation: "The text lists these as the four main types of glial cells in the central nervous system.",
+  },
+  {
+    id: "bf-4",
+    chapter: "Brain Basics",
+    clues: [
+      "The typical voltage difference between inside and outside a resting neuron is this value.",
+      "Resting electrical potential across neuronal membrane.",
+      "What is the resting membrane potential of a neuron?",
+    ],
+    answer: "Around -70 millivolts",
+    explanation: "The text states the resting voltage difference across a neuron membrane is around -70 mV.",
+  },
+  {
+    id: "bf-5",
+    chapter: "Senses & Perception",
+    clues: [
+      "This proportion of the cerebral cortex is dedicated solely to visual processing.",
+      "Cortical area allocation for vision.",
+      "What percentage of the cerebral cortex is devoted to vision?",
+    ],
+    answer: "About 30 percent",
+    explanation: "The text states vision involves about 30 percent of the human cerebral cortex.",
+  },
+  {
+    id: "bf-6",
+    chapter: "Senses & Perception",
+    clues: [
+      "Approximately this many light-sensitive cells are contained in each human eye.",
+      "Photoreceptor density per human eye.",
+      "Approximately how many photoreceptors are in each human eye?",
+    ],
+    answer: "About 125 million",
+    explanation: "The text indicates there are approximately 125 million photoreceptors in each human eye.",
+  },
+  {
+    id: "bf-7",
+    chapter: "Senses & Perception",
+    clues: [
+      "This proportion of retinal photoreceptors are specialized for dim-light vision.",
+      "Percentage of photoreceptors that are rods.",
+      "What percentage of photoreceptors are rods?",
+    ],
+    answer: "About 95 percent",
+    explanation: "The text states rods make up about 95 percent of photoreceptors in humans.",
+  },
+  {
+    id: "bf-8",
+    chapter: "Senses & Perception",
+    clues: [
+      "This is the number of distinct cone photoreceptor types sensitive to different light wavelengths.",
+      "Color-detecting photoreceptor types.",
+      "How many types of cones detect color in humans?",
+    ],
+    answer: "Three types",
+    explanation: "The text indicates the human eye contains three types of cones (red, green, blue).",
+  },
+  {
+    id: "bf-9",
+    chapter: "Senses & Perception",
+    clues: [
+      "The optic nerve exits through the retinal surface at this anatomical location.",
+      "Site of optic nerve exit from eye.",
+      "Where does the optic nerve exit the eye?",
+    ],
+    answer: "Back of the eye",
+    explanation: "The text states the optic nerve exits the back of each eye, creating a blind spot.",
+  },
+  {
+    id: "bf-10",
+    chapter: "Senses & Perception",
+    clues: [
+      "This is the name of the junction where optic nerve fibers cross over.",
+      "Crossover point of optic nerves.",
+      "What is the crossover junction of optic nerves called?",
+    ],
+    answer: "Optic chiasm",
+    explanation: "The text identifies the optic chiasm as the crossover junction where nerve fibers converge.",
+  },
+  {
+    id: "bf-11",
+    chapter: "Senses & Perception",
+    clues: [
+      "This elastic membrane vibrates at different frequencies along its length during sound processing.",
+      "Membrane responding to different sound frequencies.",
+      "What happens in the basilar membrane during sound processing?",
+    ],
+    answer: "Vibrates at different frequencies",
+    explanation: "The text explains the membrane moves and vibrates to different pitches along its length.",
+  },
+  {
+    id: "bf-12",
+    chapter: "Senses & Perception",
+    clues: [
+      "The human tongue contains approximately this many taste bud structures.",
+      "Approximate number of taste buds on the tongue.",
+      "How many taste buds does a human have?",
+    ],
+    answer: "Between 5,000 and 10,000",
+    explanation: "The text states humans have between 5,000 and 10,000 taste buds.",
+  },
+  {
+    id: "bf-13",
+    chapter: "Senses & Perception",
+    clues: [
+      "At least this many basic taste qualities are recognized by taste receptors.",
+      "Number of distinct basic taste qualities.",
+      "How many basic taste qualities exist?",
+    ],
+    answer: "At least five",
+    explanation: "The text lists five basic taste qualities: sweet, sour, salty, bitter, umami.",
+  },
+  {
+    id: "bf-14",
+    chapter: "Senses & Perception",
+    clues: [
+      "Olfactory neurons are continuously replaced due to their exposure to the outside environment.",
+      "Reason for continuous olfactory neuron replacement.",
+      "Why are olfactory neurons continuously replaced?",
+    ],
+    answer: "Exposure to outside environment",
+    explanation: "The text explains olfactory neurons are exposed to the outside environment and must be continuously replaced.",
+  },
+  {
+    id: "bf-15",
+    chapter: "Senses & Perception",
+    clues: [
+      "These two types of sensory nerve fibers carry touch and pain information from the periphery.",
+      "Types of nerve fibers for somatic sensation.",
+      "What are the types of nerve fibers for touch?",
+    ],
+    answer: "A-beta and C fibers",
+    explanation: "The text describes fast A-beta fibers and slower C fibers for touch transmission.",
+  },
+  {
+    id: "bf-16",
+    chapter: "Senses & Perception",
+    clues: [
+      "This condition occurs when normally non-painful stimuli produce painful sensations.",
+      "Condition where light touch causes pain.",
+      "What condition causes soft touch to produce pain?",
+    ],
+    answer: "Allodynia",
+    explanation: "The text defines allodynia as a condition where soft touch produces pain.",
+  },
+  {
+    id: "bf-17",
+    chapter: "Movement",
+    clues: [
+      "These muscles bend joints by bringing bones closer together.",
+      "Muscles that decrease joint angles.",
+      "What are muscles that bend a joint called?",
+    ],
+    answer: "Flexors",
+    explanation: "The text defines flexors as muscles that bend a joint.",
+  },
+  {
+    id: "bf-18",
+    chapter: "Movement",
+    clues: [
+      "These muscles straighten joints by increasing the angles between bones.",
+      "Muscles that increase joint angles.",
+      "What are muscles that straighten a joint called?",
+    ],
+    answer: "Extensors",
+    explanation: "The text defines extensors as muscles that straighten a joint.",
+  },
+  {
+    id: "bf-19",
+    chapter: "Movement",
+    clues: [
+      "This functional unit couples a single alpha motor neuron with all the muscle fibers it innervates.",
+      "Functional linkage between motor neuron and muscle.",
+      "What is the functional unit linking the nervous system to muscles?",
+    ],
+    answer: "Motor unit",
+    explanation: "The text defines a motor unit as an alpha motor neuron plus all muscle fibers it controls.",
+  },
+  {
+    id: "bf-20",
+    chapter: "Movement",
+    clues: [
+      "This disease involves the degeneration and death of motor neurons.",
+      "Pathophysiology of motor neuron diseases.",
+      "What disorder causes loss of ability to move like ALS?",
+    ],
+    answer: "Motor neurons die",
+    explanation: "The text explains that when motor neurons die in ALS, people lose ability to move.",
+  },
+  {
+    id: "bf-21",
+    chapter: "Movement",
+    clues: [
+      "This is a relatively stereotyped, automatic muscle response to a particular stimulus.",
+      "Automatic stereotyped response to stimulus.",
+      "What is a rapid automatic response to a stimulus?",
+    ],
+    answer: "Reflex",
+    explanation: "The text defines reflexes as relatively stereotyped automatic muscle responses to stimuli.",
+  },
+  {
+    id: "bf-22",
+    chapter: "Movement",
+    clues: [
+      "During the extension reflex, the flexor muscles on the opposite side are simultaneously inhibited.",
+      "Inhibition of opposing muscles during reflex.",
+      "What is reciprocal inhibition in reflex arcs?",
+    ],
+    answer: "Flexor inhibition during extension",
+    explanation: "The text explains that when extensors are activated, antagonist flexors are inhibited simultaneously.",
+  },
+  {
+    id: "bf-23",
+    chapter: "Movement",
+    clues: [
+      "This brain structure at the back of the brain coordinates the timing and fine detail of skilled movements.",
+      "Brain region coordinating skilled movement.",
+      "Which brain region coordinates and fine-tunes skilled movement?",
+    ],
+    answer: "Cerebellum",
+    explanation: "The text identifies the cerebellum as crucial for coordinating and fine-tuning skilled movement.",
+  },
+  {
+    id: "bf-24",
+    chapter: "Movement",
+    clues: [
+      "Chronic consumption of this substance commonly damages the brain structure responsible for coordination.",
+      "Common toxin damaging the cerebellum.",
+      "What common cause damages the cerebellum?",
+    ],
+    answer: "Long-term alcohol abuse",
+    explanation: "The text states long-term alcohol abuse is a common cause of acquired cerebellar degeneration.",
+  },
+  {
+    id: "bf-25",
+    chapter: "Movement",
+    clues: [
+      "These deep brain structures help select appropriate movements and suppress unwanted motor output.",
+      "Function of basal ganglia.",
+      "What is the basal ganglia's role in movement?",
+    ],
+    answer: "Controls voluntary movement",
+    explanation: "The text indicates the basal ganglia connect with cortex to control movement and thought.",
+  },
+  {
+    id: "bf-26",
+    chapter: "Movement",
+    clues: [
+      "These spinal cord circuits generate rhythmic motor patterns without requiring brain input.",
+      "Spinal circuits generating coordinated rhythms.",
+      "What are central pattern generators?",
+    ],
+    answer: "Spinal circuits generating rhythmic patterns",
+    explanation: "The text describes these as neurons that produce rhythmic patterns of muscle activation.",
+  },
+  {
+    id: "bf-27",
+    chapter: "Learning, Memory & Emotions",
+    clues: [
+      "This famous patient could not form new memories despite having intact older memories after surgery.",
+      "H.M.'s primary memory impairment.",
+      "What was H.M.'s primary memory deficit?",
+    ],
+    answer: "Unable to form new memories",
+    explanation: "The text states Molaison could not form new conscious memories after his surgery.",
+  },
+  {
+    id: "bf-28",
+    chapter: "Learning, Memory & Emotions",
+    clues: [
+      "These interconnected brain regions work with the cortex to encode and retrieve long-term memories.",
+      "Brain structures essential for memory formation.",
+      "Which brain regions work with cortex for memory?",
+    ],
+    answer: "Hippocampus and parahippocampal region",
+    explanation: "The text identifies these regions as working with cortex to form and consolidate memories.",
+  },
+  {
+    id: "bf-29",
+    chapter: "Learning, Memory & Emotions",
+    clues: [
+      "This type of declarative memory consists of facts, concepts, and general knowledge.",
+      "Declarative memory for factual knowledge.",
+      "What type of memory is semantic memory?",
+    ],
+    answer: "Memory of facts and knowledge",
+    explanation: "The text describes semantic memory as cultural knowledge and learned concepts.",
+  },
+  {
+    id: "bf-30",
+    chapter: "Learning, Memory & Emotions",
+    clues: [
+      "This type of declarative memory involves conscious recollection of personal experiences.",
+      "Autobiographical memory type.",
+      "What is episodic memory?",
+    ],
+    answer: "Memory of personal experiences",
+    explanation: "The text describes episodic memory as unique representations of personal experiences.",
+  },
+  {
+    id: "bf-31",
+    chapter: "Learning, Memory & Emotions",
+    clues: [
+      "This temporary memory system holds and manipulates information for brief periods.",
+      "Temporary working memory definition.",
+      "What is working memory?",
+    ],
+    answer: "Temporary short-term memory",
+    explanation: "The text defines working memory as a form of short-term memory for immediate information.",
+  },
+  {
+    id: "bf-32",
+    chapter: "Learning, Memory & Emotions",
+    clues: [
+      "Short-term memory can hold only this amount of information for a limited time.",
+      "Capacity limitation of short-term memory.",
+      "What is the capacity of short-term memory?",
+    ],
+    answer: "Limited to small data amounts",
+    explanation: "The text states short-term memories are limited to relatively small amounts of data.",
+  },
+  {
+    id: "bf-33",
+    chapter: "Learning, Memory & Emotions",
+    clues: [
+      "This is the ability of synaptic connections to structurally and functionally reorganize.",
+      "Ability of synapses to change.",
+      "What is synaptic plasticity?",
+    ],
+    answer: "Ability of synapses to remodel",
+    explanation: "The text defines synaptic plasticity as the ability of synapses to remodel themselves.",
+  },
+  {
+    id: "bf-34",
+    chapter: "Learning, Memory & Emotions",
+    clues: [
+      "This marine animal with a relatively simple nervous system was crucial for early learning research.",
+      "Simple animal model for studying learning.",
+      "Which animal model was important for studying synaptic plasticity?",
+    ],
+    answer: "Sea slug Aplysia",
+    explanation: "The text identifies Aplysia californica as important for studying synaptic plasticity.",
+  },
+  {
+    id: "bf-35",
+    chapter: "Learning, Memory & Emotions",
+    clues: [
+      "These genetic and protein factors are especially important for the molecular processes of long-term memory.",
+      "Key genes for memory formation.",
+      "Which genes are especially important for long-term memory formation?",
+    ],
+    answer: "NMDA receptors and CREB",
+    explanation: "The text identifies genes governing NMDA receptors and CREB as especially important.",
+  },
+  {
+    id: "bf-36",
+    chapter: "Learning, Memory & Emotions",
+    clues: [
+      "Anthropologist Paul Ekman identified this number of emotions considered basic across cultures.",
+      "Number of basic emotions identified.",
+      "How many basic emotions did Paul Ekman identify?",
+    ],
+    answer: "Six",
+    explanation: "The text states Ekman identified six basic emotions: anger, fear, surprise, disgust, joy, sadness.",
+  },
+  {
+    id: "bf-37",
+    chapter: "Learning, Memory & Emotions",
+    clues: [
+      "This limbic structure integrates emotional responses and assigns emotional significance to experiences.",
+      "Brain structure processing emotions.",
+      "Which structure integrates emotions and emotional behavior?",
+    ],
+    answer: "Amygdala",
+    explanation: "The text states the amygdala integrates emotions and emotional behavior.",
+  },
+  {
+    id: "bf-38",
+    chapter: "Learning, Memory & Emotions",
+    clues: [
+      "This neurotransmitter is particularly important for the brain's reward pathway and motivation.",
+      "Key reward pathway neurotransmitter.",
+      "Which neurotransmitter influences reward pathway?",
+    ],
+    answer: "Dopamine",
+    explanation: "The text states dopamine influences synapses in the reward pathway.",
+  },
+  {
+    id: "bf-39",
+    chapter: "Thinking, Planning & Language",
+    clues: [
+      "Language circuits are distributed across these three lobes of the cerebral cortex.",
+      "Lobes containing language areas.",
+      "Which lobes contain language circuits?",
+    ],
+    answer: "Temporal, parietal, and frontal",
+    explanation: "The text states language circuits are in temporal, parietal, and frontal lobes.",
+  },
+  {
+    id: "bf-40",
+    chapter: "Thinking, Planning & Language",
+    clues: [
+      "This frontal area is essential for expressing thoughts through speech.",
+      "Brain area for speech production.",
+      "What is Broca's area responsible for?",
+    ],
+    answer: "Speech production",
+    explanation: "The text identifies Broca's area as vital for speech production.",
+  },
+  {
+    id: "bf-41",
+    chapter: "Thinking, Planning & Language",
+    clues: [
+      "This temporal area is critical for understanding the speech of others.",
+      "Brain area for language comprehension.",
+      "What is Wernicke's area responsible for?",
+    ],
+    answer: "Understanding others' speech",
+    explanation: "The text states Wernicke's area is responsible for understanding others' speech.",
+  },
+  {
+    id: "bf-42",
+    chapter: "Thinking, Planning & Language",
+    clues: [
+      "This aphasia results from damage to the speech production area.",
+      "Aphasia from speech production area damage.",
+      "What disorder results from damage to Broca's area?",
+    ],
+    answer: "Broca's aphasia",
+    explanation: "The text indicates damage to Broca's area produces a specific language disorder (aphasia).",
+  },
+  {
+    id: "bf-43",
+    chapter: "Thinking, Planning & Language",
+    clues: [
+      "These three core processes—impulse suppression, information holding, and mental shifting—comprise executive function.",
+      "Core skills of executive function.",
+      "Which three core skills comprise executive function?",
+    ],
+    answer: "Inhibition, working memory, shifting",
+    explanation: "The text defines executive function as a blend of these three core skills.",
+  },
+  {
+    id: "bf-44",
+    chapter: "Thinking, Planning & Language",
+    clues: [
+      "This region of the frontal lobe is considered the seat of executive function and decision-making.",
+      "Brain region for executive function.",
+      "What brain region is the brain's executive?",
+    ],
+    answer: "Prefrontal cortex",
+    explanation: "The text identifies the prefrontal cortex as the \"brain's executive.\"",
+  },
+  {
+    id: "bf-45",
+    chapter: "Thinking, Planning & Language",
+    clues: [
+      "This core executive skill helps you resist calling out in a classroom despite the urge to do so.",
+      "The ability to suppress this becomes significantly better in children by age four compared to three-year-olds.",
+      "This is the ability to suppress behavior or action when it is inappropriate.",
+    ],
+    answer: "Ability to suppress behavior",
+    explanation: "The text defines inhibition as ability to suppress behavior when inappropriate.",
+  },
+  {
+    id: "bf-46",
+    chapter: "Thinking, Planning & Language",
+    clues: [
+      "The prefrontal cortex, critical for decision-making and impulse control, does not reach this developmental milestone until around age 25-30.",
+      "Most brain maturation is complete by the end of a person's 20s, with this structure being last to finish.",
+      "The prefrontal cortex reaches full maturity in the late 20s.",
+    ],
+    answer: "Late 20s",
+    explanation: "The text states the PFC is one of the last regions to develop, reaching full maturity in late 20s.",
+  },
+  {
+    id: "bf-47",
+    chapter: "Thinking, Planning & Language",
+    clues: [
+      "The amygdala works alongside the lateral region of this brain area to evaluate risk and reward in financial decisions.",
+      "Damage to the lateral prefrontal cortex impairs the ability to override emotional responses during decision-making.",
+      "Both the lateral prefrontal cortex and amygdala are involved in decision-making.",
+    ],
+    answer: "Lateral prefrontal cortex and amygdala",
+    explanation: "The text identifies these regions as important in decision-making.",
+  },
+  {
+    id: "bf-48",
+    chapter: "Thinking, Planning & Language",
+    clues: [
+      "These neurons in the temporal lobe respond specifically when someone views photographs of one person but remain quiet for other individuals.",
+      "They are interconnected with cells encoding related concepts like needle, thread, and sewing.",
+      "These neurons fire for specific concepts rather than just general categories of objects.",
+    ],
+    answer: "Fire for specific concepts",
+    explanation: "The text explains concept cells fire when someone views a particular person or concept.",
+  },
+  {
+    id: "bf-49",
+    chapter: "The Developing Brain",
+    clues: [
+      "Signals from mesodermal tissue beneath the developing spinal cord trigger ectoderm cells to become nerve tissue.",
+      "This process is induced by signaling molecules that turn certain genes on and others off.",
+      "This is the process of ectoderm formation of nerve tissue during early development.",
+    ],
+    answer: "Ectoderm formation of nerve tissue",
+    explanation: "The text describes neural induction as signals triggering ectoderm cells to become nerve tissue.",
+  },
+  {
+    id: "bf-50",
+    chapter: "The Developing Brain",
+    clues: [
+      "Early in embryonic development, the head end of the neural tube thickens into bulges that form these three major divisions.",
+      "These regions eventually become the cerebrum, midbrain, and parts of the brainstem.",
+      "The forebrain, midbrain, and hindbrain are the three primary brain divisions that develop first.",
+    ],
+    answer: "Forebrain, midbrain, hindbrain",
+    explanation: "The text states these are the three distinct bulges in early brain development.",
+  },
+  {
+    id: "bf-51",
+    chapter: "The Developing Brain",
+    clues: [
+      "The concentration of signaling molecules like sonic hedgehog decreases farther from their source, creating these gradients that guide cell fate.",
+      "A neuron's destiny is largely determined by its proximity to various sources of these molecules.",
+      "Concentration gradients of signaling molecules guide neuron development.",
+    ],
+    answer: "Concentration gradients of signaling molecules",
+    explanation: "The text explains signaling molecules create gradients that determine cell fate.",
+  },
+  {
+    id: "bf-52",
+    chapter: "The Developing Brain",
+    clues: [
+      "This process involves the symmetric and asymmetric division of neural stem and progenitor cells, increasing the pool by billions.",
+      "New neurons arise from a relatively small pool of specialized cells that can divide and become multiple mature types.",
+      "This is the process of neuron formation called proliferation.",
+    ],
+    answer: "Proliferation",
+    explanation: "The text defines proliferation as the cell division increasing the pool of brain cells.",
+  },
+  {
+    id: "bf-53",
+    chapter: "The Developing Brain",
+    clues: [
+      "About 90 percent of neuron migration in humans occurs along these supportive structures that project radially from the intermediate zone to the cortex.",
+      "Neurons use these as scaffolding, inching along glial projections to reach their final locations.",
+      "Radial glia and molecular cues guide neurons to their final destinations.",
+    ],
+    answer: "Radial glia and molecular cues",
+    explanation: "The text describes radial glia as scaffolding that neurons use to migrate.",
+  },
+  {
+    id: "bf-54",
+    chapter: "The Developing Brain",
+    clues: [
+      "This enlargement at the axon tip actively explores the environment, being guided by molecular cues to seek out its precise destination.",
+      "It is guided by both attractive cues that lay down a path and repellent molecules that funnel it through corridors.",
+      "This enlargement at the axon tip guides growth during axon development.",
+    ],
+    answer: "Enlargement at axon tip guiding growth",
+    explanation: "The text describes the growth cone as actively exploring to find its destination.",
+  },
+  {
+    id: "bf-55",
+    chapter: "The Developing Brain",
+    clues: [
+      "These families of guidance proteins—named netrin, semaphorin, and ephrin—are found across species from worms to humans.",
+      "Netrin was first discovered in worms guiding neurons around the nerve ring, later found to guide vertebrate axons in the spinal cord.",
+      "Netrin and semaphorin guide axon growth toward and away from targets.",
+    ],
+    answer: "Guide axon growth",
+    explanation: "The text identifies these proteins as families guiding axon growth and direction.",
+  },
+  {
+    id: "bf-56",
+    chapter: "The Developing Brain",
+    clues: [
+      "A tiny space called the synapse forms between the axon terminal and the receiving portion of the postsynaptic neuron.",
+      "Once axons reach their targets, a specialized connection begins to form with the help of guidance molecules.",
+      "Synapse formation begins when axons reach their targets.",
+    ],
+    answer: "Synapse formation begins",
+    explanation: "The text states specialized connections form at synapses when axons reach targets.",
+  },
+  {
+    id: "bf-57",
+    chapter: "The Developing Brain",
+    clues: [
+      "This fatty wrapping around axons can increase the speed of signal transmission by as much as 100 times.",
+      "The myelin sheath ensures electrical signals travel rapidly and protects axons from damage.",
+      "This process speeds signal transmission through axons.",
+    ],
+    answer: "Speeds signal transmission",
+    explanation: "The text states myelination increases the speed of signal transmission by up to 100 times.",
+  },
+  {
+    id: "bf-58",
+    chapter: "The Developing Brain",
+    clues: [
+      "These cells in the central nervous system wrap axons in fatty myelin, unlike their peripheral counterparts called Schwann cells.",
+      "In the brain and spinal cord, these glial cells form the myelin that insulates nerve fibers.",
+      "Oligodendrocytes are the glial cells that form myelin in the CNS.",
+    ],
+    answer: "Oligodendrocytes",
+    explanation: "The text identifies oligodendrocytes as wrapping axons in myelin in the CNS.",
+  },
+  {
+    id: "bf-59",
+    chapter: "Infant, Child & Adolescent Brain",
+    clues: [
+      "A newborn human brain weighs just slightly less than a pound, contrasting sharply with the typical adult brain weight of three pounds.",
+      "This weight of approximately 13 ounces is the result of 40 weeks of prenatal brain development.",
+      "The average weight of a newborn brain is about 370 grams or 13 ounces.",
+    ],
+    answer: "About 370 grams (13 ounces)",
+    explanation: "The text states the average newborn brain weighs about 370 grams.",
+  },
+  {
+    id: "bf-60",
+    chapter: "Infant, Child & Adolescent Brain",
+    clues: [
+      "Immediately after birth, this rapid expansion rate gradually decelerates, reaching about 0.4 percent per day by three months of age.",
+      "The infant brain expands so quickly that by 90 days it is already 64 percent larger than at birth.",
+      "The growth rate of an infant brain immediately after birth is about 1 percent per day.",
+    ],
+    answer: "About 1 percent per day",
+    explanation: "The text indicates the growth rate is about 1 percent per day immediately after birth.",
+  },
+  {
+    id: "bf-61",
+    chapter: "Infant, Child & Adolescent Brain",
+    clues: [
+      "By three months of age, the infant brain has expanded to this percentage of its birth volume.",
+      "The cerebellum, the fastest-growing region, more than doubles its volume during the first three months.",
+      "A 90-day-old brain is 64 percent larger than at birth.",
+    ],
+    answer: "64 percent larger",
+    explanation: "The text states that by 90 days, brain volume is 64 percent larger than at birth.",
+  },
+  {
+    id: "bf-62",
+    chapter: "Infant, Child & Adolescent Brain",
+    clues: [
+      "By this age, the brain has achieved most of its adult growth trajectory, reaching 90 percent of adult size.",
+      "At this developmental stage, significant brain growth continues but at a much slower rate than in infancy.",
+      "By 3 years old, the brain has reached 90 percent of adult size.",
+    ],
+    answer: "By 3 years old",
+    explanation: "The text states the brain has reached about 90 percent of adult size by age 3.",
+  },
+  {
+    id: "bf-63",
+    chapter: "Infant, Child & Adolescent Brain",
+    clues: [
+      "A 2-year-old's brain contains far more synaptic connections than an adult brain despite being only about 80 percent its size.",
+      "This excess of connections is then systematically pruned during early childhood as the brain refines its networks.",
+      "A 2-year-old has 50 percent more synapses than an adult brain.",
+    ],
+    answer: "50 percent more synapses",
+    explanation: "The text indicates a 2-year-old brain has 50 percent more synapses than adult brain.",
+  },
+  {
+    id: "bf-64",
+    chapter: "Infant, Child & Adolescent Brain",
+    clues: [
+      "This refinement process eliminates weaker connections while allowing frequently activated synapses to grow and stabilize.",
+      "Like pruning rose bushes to redirect nutrients to new growth, this process keeps only necessary brain connections.",
+      "Synaptic pruning reduces excess synapses in early childhood.",
+    ],
+    answer: "Synaptic pruning",
+    explanation: "The text describes synaptic pruning as the process of reducing excess synapses.",
+  },
+  {
+    id: "bf-65",
+    chapter: "Infant, Child & Adolescent Brain",
+    clues: [
+      "This species of primate reaches its full adult brain size by six months, demonstrating how much faster non-human primates mature.",
+      "Human brains develop much more extensively after birth compared to other animals that develop more in the womb.",
+      "Squirrel monkeys reach adult brain size at 6 months old.",
+    ],
+    answer: "At 6 months old",
+    explanation: "The text states squirrel monkeys reach adult brain size at 6 months.",
+  },
+  {
+    id: "bf-66",
+    chapter: "Infant, Child & Adolescent Brain",
+    clues: [
+      "The process of coating axons with insulating myelin increases the density of gray matter in certain regions during development.",
+      "The appearance of more densely packed neurons in some brain areas is actually due to increased wrapping of axons.",
+      "Myelination causes increased gray matter density in some brain regions during development.",
+    ],
+    answer: "Myelination",
+    explanation: "The text indicates myelination increases in specific regions as development progresses.",
+  },
+  {
+    id: "bf-67",
+    chapter: "Infant, Child & Adolescent Brain",
+    clues: [
+      "Recent neuroscience research indicates continued brain maturation well into the third decade of life.",
+      "Different brain regions mature at different rates, with some areas still developing after age 25.",
+      "The human brain continues developing until about age 30.",
+    ],
+    answer: "Until about age 30",
+    explanation: "The text indicates human brains continue developing until about age 30.",
+  },
+  {
+    id: "bf-68",
+    chapter: "Infant, Child & Adolescent Brain",
+    clues: [
+      "These cortical regions, important for working memory and higher cognitive functions, become increasingly insulated as individuals approach age 30.",
+      "The timing of myelination in these areas coincides with improvements in executive function and cognitive control.",
+      "Frontal and parietal neocortices become more myelinated closer to age 30.",
+    ],
+    answer: "Frontal and parietal",
+    explanation: "The text states frontal and parietal neocortices become more myelinated closer to 30.",
+  },
+  {
+    id: "bf-69",
+    chapter: "Adult & Aging Brain",
+    clues: [
+      "The brain undergoes this refinement process between childhood and adulthood, retaining only the most important connections.",
+      "Gray matter volume decreases as the brain eliminates extra cells and reduces connections, though this slowing by the late 20s.",
+      "Excess neurons and synapses are pruned between childhood and adulthood.",
+    ],
+    answer: "Excess neurons and synapses are pruned",
+    explanation: "The text states gray matter is pruned as excess neurons and synapses are eliminated.",
+  },
+  {
+    id: "bf-70",
+    chapter: "Adult & Aging Brain",
+    clues: [
+      "This type of brain tissue reaches its maximum volume around the fourth decade of life, representing the brain's structural peak.",
+      "Much of this added tissue represents increased connections between distant brain areas compared to the local organization in childhood.",
+      "White matter reaches peak volume around age 40.",
+    ],
+    answer: "Around age 40",
+    explanation: "The text indicates white matter reaches peak volume around age 40.",
+  },
+  {
+    id: "bf-71",
+    chapter: "Adult & Aging Brain",
+    clues: [
+      "This prefrontal brain region's full \"wiring\" in adulthood enables better impulse control and rational decision-making compared to adolescents.",
+      "The delay in maturation of this area explains typical adolescent characteristics like short attention spans and impulsive behavior.",
+      "The prefrontal cortex becomes fully \"wired up\" last in adulthood.",
+    ],
+    answer: "Prefrontal cortex",
+    explanation: "The text identifies the prefrontal cortex as the most important region to fully develop in adulthood.",
+  },
+  {
+    id: "bf-72",
+    chapter: "Adult & Aging Brain",
+    clues: [
+      "The ability to identify patterns and solve novel problems peaks around this age before gradually declining.",
+      "This type of intelligence, involving quick processing of new information rather than stored knowledge, peaks in young adulthood.",
+      "Fluid intelligence peaks around age 30.",
+    ],
+    answer: "Around age 30",
+    explanation: "The text states fluid intelligence peaks around age 30.",
+  },
+  {
+    id: "bf-73",
+    chapter: "Adult & Aging Brain",
+    clues: [
+      "Vocabulary, knowledge of facts, and accumulated information reach their maximum effectiveness at this age.",
+      "This form of intelligence, built on experience and cultural knowledge, continues to improve well into middle age.",
+      "Crystallized intelligence peaks around age 50.",
+    ],
+    answer: "Around age 50",
+    explanation: "The text indicates crystallized intelligence increases until about age 50.",
+  },
+  {
+    id: "bf-74",
+    chapter: "Adult & Aging Brain",
+    clues: [
+      "This conscious form of memory, including recall of life events and factual knowledge, shows the most age-related decline.",
+      "Autobiographical memories of personal experiences are particularly vulnerable to normal aging processes.",
+      "Declarative memory declines most with age.",
+    ],
+    answer: "Declarative memory",
+    explanation: "The text states declarative memory declines with age.",
+  },
+  {
+    id: "bf-75",
+    chapter: "Adult & Aging Brain",
+    clues: [
+      "This type of memory, including the ability to remember how to ride a bike or tie shoes, remains largely unchanged throughout aging.",
+      "Procedural memory and other implicit forms of memory resist the typical cognitive decline seen in aging.",
+      "Nondeclarative memory remains largely intact with aging.",
+    ],
+    answer: "Nondeclarative memory",
+    explanation: "The text indicates nondeclarative memory remains largely intact with age.",
+  },
+  {
+    id: "bf-76",
+    chapter: "Adult & Aging Brain",
+    clues: [
+      "This type of memory, specifically for personal experiences and life events, shows the most noticeable decline in normal aging.",
+      "Remembering the details of where you were and what you felt during past events becomes more difficult with age.",
+      "Episodic memory decline is the most common age-related memory decline.",
+    ],
+    answer: "Episodic memory decline",
+    explanation: "The text identifies episodic memory as experiencing the most common decline.",
+  },
+  {
+    id: "bf-77",
+    chapter: "Adult & Aging Brain",
+    clues: [
+      "The ability to hold and manipulate information mentally, essential for activities like looking up a phone number and dialing it, diminishes with age.",
+      "Some studies show this cognitive function begins to decline as early as age 30, as part of fluid intelligence decline.",
+      "Working memory declines with age.",
+    ],
+    answer: "Declines with age",
+    explanation: "The text notes that working memory ability declines with age.",
+  },
+  {
+    id: "bf-78",
+    chapter: "Adult & Aging Brain",
+    clues: [
+      "These brain regions—the olfactory bulbs and the dentate gyrus of the hippocampus—continue this process throughout the entire lifespan.",
+      "Recent research suggests this process occurs at a more modest rate in humans than in rodent studies.",
+      "Neurogenesis continues in two brain regions throughout life.",
+    ],
+    answer: "Neurogenesis",
+    explanation: "The text indicates neurogenesis continues in the olfactory bulbs and dentate gyrus.",
+  },
+  {
+    id: "bf-79",
+    chapter: "Brain States",
+    clues: [
+      "Most people spend approximately one-third of their entire lives engaged in this essential restorative process.",
+      "During this state, the brain remains highly active, processing memories and performing essential maintenance functions.",
+      "About one-third of life is spent sleeping.",
+    ],
+    answer: "About one-third",
+    explanation: "The text states most people spend about one-third of their lives asleep.",
+  },
+  {
+    id: "bf-80",
+    chapter: "Brain States",
+    clues: [
+      "These are the two main categories distinguished by different patterns of brain wave activity and neural regulation.",
+      "One involves rapid eye movements and dreams, while the other features large, slow brain waves.",
+      "The two main sleep states are slow wave sleep and REM sleep.",
+    ],
+    answer: "Slow wave sleep and REM sleep",
+    explanation: "The text identifies SWS and REM as the two main sleep states.",
+  },
+  {
+    id: "bf-81",
+    chapter: "Brain States",
+    clues: [
+      "These waves are characterized by high amplitude and low frequency, indicating synchronized neuronal activity.",
+      "They appear more prominent as a person spends longer awake, then decrease as sleep progresses.",
+      "High amplitude and low frequency brain waves are slow waves.",
+    ],
+    answer: "Slow waves",
+    explanation: "The text describes slow waves as high amplitude and low frequency.",
+  },
+  {
+    id: "bf-82",
+    chapter: "Brain States",
+    clues: [
+      "These delta oscillations occur during the deepest sleep and are associated with memory consolidation and brain restoration.",
+      "Their presence indicates the brain is in its most synchronized state during sleep.",
+      "Delta waves occur during deep sleep.",
+    ],
+    answer: "Delta waves",
+    explanation: "The text states delta waves occur during deep sleep with frequencies less than 3.5 Hz.",
+  },
+  {
+    id: "bf-83",
+    chapter: "Brain States",
+    clues: [
+      "This sleep state is characterized by rapid eye movements and is when the brain experiences vivid sensory narratives.",
+      "During this stage, the brain's electrical activity resembles wakefulness more than deep sleep.",
+      "Dreams primarily occur during REM sleep.",
+    ],
+    answer: "REM sleep",
+    explanation: "The text states dreaming happens mainly during REM sleep.",
+  },
+  {
+    id: "bf-84",
+    chapter: "Brain States",
+    clues: [
+      "These rapid movements of the eyes occur periodically during a specific sleep stage and are characteristic of dream sleep.",
+      "They continue throughout a particular sleep state despite the person's muscles being relatively paralyzed.",
+      "Periodic rapid eye movements characterize REM sleep.",
+    ],
+    answer: "Characteristic of dream sleep",
+    explanation: "The text describes REM sleep named for periodic rapid eye movements.",
+  },
+  {
+    id: "bf-85",
+    chapter: "Brain States",
+    clues: [
+      "These neurotransmitters—acetylcholine, norepinephrine, serotonin, and glutamate—are released by upper brainstem neurons to maintain alertness.",
+      "These arousal chemicals work in concert to keep the forebrain, basal ganglia, and thalamus actively engaged.",
+      "Acetylcholine, norepinephrine, serotonin, and glutamate keep us awake.",
+    ],
+    answer: "Acetylcholine, norepinephrine, serotonin, glutamate",
+    explanation: "The text lists these neurotransmitters as arousal system neurotransmitters.",
+  },
+  {
+    id: "bf-86",
+    chapter: "Brain States",
+    clues: [
+      "These specialized cells in the hypothalamus produce a neuropeptide critical for preventing sudden transitions to sleep during the day.",
+      "They send projections throughout the brain to boost arousal and affect metabolic rate.",
+      "Orexin-producing neurons in the hypothalamus produce this wakefulness chemical.",
+    ],
+    answer: "Orexin-producing neurons",
+    explanation: "The text identifies orexin neurons as located in the lateral hypothalamus.",
+  },
+  {
+    id: "bf-87",
+    chapter: "Brain States",
+    clues: [
+      "People with this sleep disorder suddenly fall asleep during the day due to loss of neurons that produce orexin in the lateral hypothalamus.",
+      "The condition involves abnormally quick entry into REM sleep and can include sudden muscle weakness triggered by emotion.",
+      "Narcolepsy is caused by loss of orexin neurons.",
+    ],
+    answer: "Loss of orexin neurons",
+    explanation: "The text states narcolepsy is caused by loss of orexin neurons.",
+  },
+  {
+    id: "bf-88",
+    chapter: "Brain States",
+    clues: [
+      "This neurochemical accumulates during wakefulness and binds to receptors that slow cellular activity, creating sleep pressure.",
+      "Its levels increase the longer you stay awake and then decrease as you sleep.",
+      "Adenosine builds up when you stay awake.",
+    ],
+    answer: "Adenosine",
+    explanation: "The text identifies adenosine as a chemical that increases during wakefulness.",
+  },
+  {
+    id: "bf-89",
+    chapter: "Brain States",
+    clues: [
+      "This chemical's binding to nerve cell receptors slows down cellular activity and reduces arousal.",
+      "Its accumulation during prolonged wakefulness accounts for the increased slow waves observed during subsequent sleep.",
+      "Adenosine binding slows cellular activity and reduces arousal.",
+    ],
+    answer: "Slows cellular activity",
+    explanation: "The text states adenosine binds to receptors to slow cellular activity.",
+  },
+  {
+    id: "bf-90",
+    chapter: "Brain States",
+    clues: [
+      "This psychoactive compound prevents adenosine from interacting with its receptors throughout the brain.",
+      "By blocking the sleep-pressure molecule's effects, it maintains alertness even during adenosine accumulation.",
+      "Caffeine blocks adenosine interaction with its receptors.",
+    ],
+    answer: "Blocks adenosine interaction",
+    explanation: "The text explains caffeine binds to adenosine receptors, preventing adenosine interaction.",
+  },
+  {
+    id: "bf-91",
+    chapter: "The Body in Balance",
+    clues: [
+      "This fundamental principle describes the body's tendency to maintain stable internal conditions despite external environmental changes.",
+      "It encompasses all the systems that keep your internal environment in balance through dynamic regulation.",
+      "Homeostasis is the tendency to maintain equilibrium.",
+    ],
+    answer: "Tendency to maintain equilibrium",
+    explanation: "The text defines homeostasis as maintenance of balance in body tissues and organ systems.",
+  },
+  {
+    id: "bf-92",
+    chapter: "The Body in Balance",
+    clues: [
+      "This approximately 24-hour cycle of behavior and physiology is generated by internal clocks present in nearly every cell.",
+      "These rhythms influence everything from gut movement to blood pressure fluctuations throughout the day and night.",
+      "A circadian rhythm is a 24-hour cycle of behavior.",
+    ],
+    answer: "24-hour cycle of behavior",
+    explanation: "The text describes circadian rhythms as cycles lasting approximately 24 hours.",
+  },
+  {
+    id: "bf-93",
+    chapter: "The Body in Balance",
+    clues: [
+      "This tiny cluster of neurons in the hypothalamus acts like a master metronome, emitting steady action potentials during day and silence at night.",
+      "It receives signals from retinal photoreceptors to stay synchronized with Earth's actual day/night cycle.",
+      "The suprachiasmatic nucleus (SCN) coordinates daily rhythms.",
+    ],
+    answer: "Suprachiasmatic nucleus (SCN)",
+    explanation: "The text identifies the SCN as coordinating daily rhythms like a metronome.",
+  },
+  {
+    id: "bf-94",
+    chapter: "The Body in Balance",
+    clues: [
+      "These genes encode proteins that interact cyclically, controlling the internal time-keeping mechanism present in nearly all organisms.",
+      "Similar sets of these genes have been identified from fruit flies to humans, showing evolutionary conservation.",
+      "Clock genes control circadian time cycles.",
+    ],
+    answer: "Control circadian time cycles",
+    explanation: "The text states clock genes encode proteins that keep time through cyclic interactions.",
+  },
+  {
+    id: "bf-95",
+    chapter: "The Body in Balance",
+    clues: [
+      "The retina sends these signals based on light exposure, allowing the suprachiasmatic nucleus to remain synchronized with Earth's rotation.",
+      "Without this critical daily input, internal clocks gradually drift later, as seen in light-deprived animals.",
+      "Photoreceptor signals from the retina keep the SCN in sync with Earth's cycle.",
+    ],
+    answer: "Photoreceptor signals from retina",
+    explanation: "The text indicates the SCN receives signals from retinal photoreceptors about day/night.",
+  },
+  {
+    id: "bf-96",
+    chapter: "The Body in Balance",
+    clues: [
+      "This hormone is secreted at night and influences sleep behaviors by binding to receptors throughout the brain and body.",
+      "Its nocturnal release from the pineal gland signals the body that darkness has fallen.",
+      "Melatonin influences sleep behaviors.",
+    ],
+    answer: "Melatonin",
+    explanation: "The text identifies melatonin as a hormone influencing sleep behaviors.",
+  },
+  {
+    id: "bf-97",
+    chapter: "The Body in Balance",
+    clues: [
+      "This small, pinecone-shaped gland positioned between the cerebral hemispheres secretes the sleep-regulating hormone melatonin.",
+      "Its activation by signals from the suprachiasmatic nucleus triggers nighttime release of its primary product.",
+      "The pineal gland secretes melatonin.",
+    ],
+    answer: "Pineal gland",
+    explanation: "The text states the pineal gland secretes melatonin into the bloodstream at night.",
+  },
+  {
+    id: "bf-98",
+    chapter: "The Body in Balance",
+    clues: [
+      "This system involves both the nervous system and endocrine glands working together to regulate hormone production and release.",
+      "It encompasses the hypothalamus, pituitary gland, and various endocrine organs throughout the body.",
+      "The neuroendocrine system controls hormone production and release.",
+    ],
+    answer: "Neuroendocrine system",
+    explanation: "The text identifies the neuroendocrine system as controlling hormone production.",
+  },
+  {
+    id: "bf-99",
+    chapter: "The Body in Balance",
+    clues: [
+      "These two powerful hormones are released into capillaries within the pituitary gland by hypothalamic neurons.",
+      "Vasopressin acts on kidneys to increase water retention, while the other promotes bonding and reproductive functions.",
+      "Vasopressin and oxytocin are released by the posterior pituitary.",
+    ],
+    answer: "Vasopressin and oxytocin",
+    explanation: "The text identifies these as molecules released from the posterior pituitary.",
+  },
+  {
+    id: "bf-100",
+    chapter: "The Body in Balance",
+    clues: [
+      "This hormone causes the kidneys to retain water and constricts blood vessels, increasing blood volume and pressure.",
+      "It plays a crucial role in maintaining the body's water balance and fluid homeostasis.",
+      "Vasopressin increases water retention.",
+    ],
+    answer: "Increases water retention",
+    explanation: "The text explains vasopressin increases water retention in the kidneys.",
+  },
+  {
+    id: "bf-101",
+    chapter: "The Body in Balance",
+    clues: [
+      "This brain region oversees the production and release of many hormones through its direct connections to the pituitary gland.",
+      "It contains neurons that release both hormones directly into the pituitary and releasing hormones that control other glands.",
+      "The hypothalamus controls hormone production and release.",
+    ],
+    answer: "Hormone production and release",
+    explanation: "The text states the hypothalamus oversees hormone production and release.",
+  },
+  {
+    id: "bf-102",
+    chapter: "The Body in Balance",
+    clues: [
+      "These stress hormones—including one from the adrenal medulla and others from the adrenal cortex—are released during threats to the body's stability.",
+      "They prepare the body for \"fight or flight\" by mobilizing energy and enhancing alertness.",
+      "Epinephrine and glucocorticoids are released during stress.",
+    ],
+    answer: "Epinephrine and glucocorticoids",
+    explanation: "The text indicates stress causes release of epinephrine and glucocorticoids.",
+  },
+  {
+    id: "bf-103",
+    chapter: "Childhood Disorders",
+    clues: [
+      "More than 40 percent of individuals with this neurodevelopmental condition demonstrate normal or above-average cognitive abilities.",
+      "Intelligence levels vary widely across the spectrum, from profound intellectual disability to exceptional talents.",
+      "More than 40 percent of people with autism have normal or above-average intelligence.",
+    ],
+    answer: "More than 40 percent",
+    explanation: "The text states over 40 percent with autism have normal or above-average intelligence.",
+  },
+  {
+    id: "bf-104",
+    chapter: "Childhood Disorders",
+    clues: [
+      "This ratio of male to female diagnoses in autism may reflect either real biological differences or possible underdiagnosis in girls.",
+      "Boys receive diagnoses of autism spectrum disorder at this frequency relative to girls.",
+      "The ratio of autism diagnoses in boys to girls is 4 to 5 times more boys.",
+    ],
+    answer: "4 to 5 times more boys",
+    explanation: "The text indicates 4 to 5 times more boys are diagnosed with autism than girls.",
+  },
+  {
+    id: "bf-105",
+    chapter: "Childhood Disorders",
+    clues: [
+      "Approximately one in this number of American 8-year-olds is estimated to meet diagnostic criteria for autism spectrum disorder.",
+      "The prevalence has risen dramatically since the 1970s, though debate continues about whether this reflects true increases or better recognition.",
+      "About 1 of every 68 American children has autism.",
+    ],
+    answer: "About 1 of every 68",
+    explanation: "The text states approximately 1 of every 68 American 8-year-olds meets autism criteria.",
+  },
+  {
+    id: "bf-106",
+    chapter: "Childhood Disorders",
+    clues: [
+      "If one identical twin is diagnosed with autism, the likelihood of the other twin also being diagnosed exceeds this threshold.",
+      "This high concordance rate among genetically identical individuals points to a strong genetic component.",
+      "If one identical twin has autism, the other's chance is greater than 50 percent.",
+    ],
+    answer: "Greater than 50 percent",
+    explanation: "The text indicates the other twin has greater than 50 percent chance of diagnosis.",
+  },
+  {
+    id: "bf-107",
+    chapter: "Childhood Disorders",
+    clues: [
+      "This gene codes for a protein whose mutation causes intellectual disability and is associated with autism in 50-60 percent of cases.",
+      "Mutations in this single gene can lead to fragile X syndrome with significant cognitive and social effects.",
+      "The FMR1 gene codes for fragile X mental retardation protein.",
+    ],
+    answer: "FMR1 gene",
+    explanation: "The text identifies FMR1 as coding for fragile X protein.",
+  },
+  {
+    id: "bf-108",
+    chapter: "Childhood Disorders",
+    clues: [
+      "Between 50 to 60 percent of individuals with this genetic condition, characterized by fragile sites on the X chromosome, also have autism.",
+      "This represents one of the strongest associations between a single genetic mutation and autism spectrum disorder.",
+      "Between 50 to 60 percent of people with fragile X syndrome have autism.",
+    ],
+    answer: "Between 50 to 60 percent",
+    explanation: "The text states 50-60 percent of fragile X syndrome patients have ASD.",
+  },
+  {
+    id: "bf-109",
+    chapter: "Childhood Disorders",
+    clues: [
+      "Approximately 40 percent of people with this genetic condition, involving tumors in multiple organs including the brain, develop autism.",
+      "Mutations in TSC1 or TSC2 genes disrupt cell growth control, and this feature often co-occurs with autism.",
+      "Approximately 40 percent of people with tuberous sclerosis have autism.",
+    ],
+    answer: "Approximately 40 percent",
+    explanation: "The text indicates about 40 percent with tuberous sclerosis have ASD.",
+  },
+  {
+    id: "bf-110",
+    chapter: "Childhood Disorders",
+    clues: [
+      "This neurodevelopmental disorder, characterized by inattention and hyperactivity, is now recognized as the most commonly diagnosed childhood condition.",
+      "It affects the brain's ability to maintain focus and regulate impulses, impacting academic and social functioning.",
+      "ADHD is the most common diagnosis in childhood disorders.",
+    ],
+    answer: "ADHD",
+    explanation: "The text states ADHD is one of the most commonly diagnosed childhood conditions.",
+  },
+  {
+    id: "bf-111",
+    chapter: "Childhood Disorders",
+    clues: [
+      "Approximately this percentage of American children between ages 4 and 17 have received a diagnosis of this attention disorder.",
+      "The prevalence has increased notably since the 1980s, though debate continues about diagnostic expansion versus increased recognition.",
+      "About 11 percent of American children have received an ADHD diagnosis.",
+    ],
+    answer: "About 11 percent",
+    explanation: "The text indicates about 11 percent of American children between 4-17 have ADHD.",
+  },
+  {
+    id: "bf-112",
+    chapter: "Childhood Disorders",
+    clues: [
+      "At least three in ten children diagnosed with this condition in childhood continue to experience symptoms into adulthood.",
+      "The disorder's persistence highlights that it is not simply a developmental phase but often a lifelong condition.",
+      "At least 30 percent of ADHD diagnosed children continue into adulthood.",
+    ],
+    answer: "At least 30 percent",
+    explanation: "The text states in at least 30 percent of ADHD cases the disorder continues into adulthood.",
+  },
+  {
+    id: "bf-113",
+    chapter: "Childhood Disorders",
+    clues: [
+      "This chromosomal abnormality results from the presence of an extra copy of chromosome 21 instead of the typical two.",
+      "The severity of intellectual disability varies among individuals, ranging from mild to profound.",
+      "Down syndrome is caused by an extra copy of chromosome 21.",
+    ],
+    answer: "Extra copy of chromosome 21",
+    explanation: "The text indicates Down syndrome results from trisomy 21.",
+  },
+  {
+    id: "bf-114",
+    chapter: "Childhood Disorders",
+    clues: [
+      "Nearly everyone born with Down syndrome develops this neurodegenerative disease, often in their 40s or 50s.",
+      "The condition results from having an extra copy of a chromosome containing the amyloid precursor protein gene.",
+      "People with Down syndrome develop early-onset Alzheimer's disease.",
+    ],
+    answer: "Early-onset Alzheimer's disease",
+    explanation: "The text states virtually all with Down syndrome develop early-onset Alzheimer's in 40s-50s.",
+  },
+  {
+    id: "bf-115",
+    chapter: "Psychiatric Disorders",
+    clues: [
+      "These mental health conditions share an inability to control worry or fear responses despite the person's awareness that the anxiety is excessive.",
+      "The common feature across various anxiety conditions is anxiety that persists and intensifies beyond normal responses to stressors.",
+      "Anxiety disorders are most commonly caused by uncontrollable anxiety.",
+    ],
+    answer: "Uncontrollable anxiety",
+    explanation: "The text identifies uncontrollable anxiety as the common thread in anxiety disorders.",
+  },
+  {
+    id: "bf-116",
+    chapter: "Psychiatric Disorders",
+    clues: [
+      "This neurotransmitter, deficient in many psychiatric conditions, has its synaptic levels increased by a major class of antidepressants.",
+      "Medications targeting this monoamine system help elevate mood by preventing its reabsorption after release.",
+      "SSRIs raise serotonin levels.",
+    ],
+    answer: "Serotonin",
+    explanation: "The text explains SSRIs raise serotonin levels.",
+  },
+  {
+    id: "bf-117",
+    chapter: "Psychiatric Disorders",
+    clues: [
+      "Benzodiazepines enhance levels of this inhibitory neurotransmitter, which acts like a \"brake pedal\" on neuronal activity.",
+      "By increasing this molecule's effects, these medications reduce brain activity in anxiety-related regions.",
+      "Benzodiazepines boost GABA levels.",
+    ],
+    answer: "GABA levels",
+    explanation: "The text states benzodiazepines boost inhibitory neurotransmitter GABA.",
+  },
+  {
+    id: "bf-118",
+    chapter: "Psychiatric Disorders",
+    clues: [
+      "This anxiety disorder, characterized by obsessions and compulsions, affects approximately one percent of the U.S. adult population.",
+      "OCD involves intrusive thoughts the person cannot control and ritualistic behaviors performed to relieve the anxiety they cause.",
+      "About 1 percent of U.S. adults have OCD.",
+    ],
+    answer: "About 1 percent",
+    explanation: "The text indicates OCD affects about 1 percent of U.S. adults.",
+  },
+  {
+    id: "bf-119",
+    chapter: "Psychiatric Disorders",
+    clues: [
+      "These two core diagnostic features distinguish autism from other developmental and psychiatric conditions.",
+      "One involves difficulties with social understanding and communication, while the other involves restricted patterns of behavior and thought.",
+      "The two main autism diagnosis criteria are impaired social communication and repetitive behaviors.",
+    ],
+    answer: "Impaired social communication and repetitive behaviors",
+    explanation: "The text identifies these as the two main diagnostic criteria for autism.",
+  },
+  {
+    id: "bf-120",
+    chapter: "Psychiatric Disorders",
+    clues: [
+      "This severe psychiatric disorder typically makes its first appearance during the period when the prefrontal cortex undergoes critical maturation.",
+      "The onset during mid-to-late adolescence corresponds with major brain reorganization in regions governing executive function.",
+      "Schizophrenia typically first appears between ages 15 and 25.",
+    ],
+    answer: "Between ages 15 and 25",
+    explanation: "The text states schizophrenia usually appears between ages 15-25.",
+  },
+  {
+    id: "bf-121",
+    chapter: "Psychiatric Disorders",
+    clues: [
+      "This mood disorder currently affects nearly 7 percent of American adults and is the most common psychiatric condition.",
+      "The lifetime risk for experiencing a major depressive episode is substantial across the population.",
+      "Nearly 7 percent of American adults have major depression.",
+    ],
+    answer: "Nearly 7 percent",
+    explanation: "The text indicates nearly 7 percent of American adults experience major depression.",
+  },
+  {
+    id: "bf-122",
+    chapter: "Psychiatric Disorders",
+    clues: [
+      "This striking sex difference in depression rates is not fully understood but is an active area of psychiatric research.",
+      "Women comprise the majority of those diagnosed with major depressive disorder across most age groups.",
+      "The sex ratio for depression is 7 out of 10 are female.",
+    ],
+    answer: "7 out of 10 are female",
+    explanation: "The text states 7 out of 10 with major depression are likely female.",
+  },
+  {
+    id: "bf-123",
+    chapter: "Psychiatric Disorders",
+    clues: [
+      "The hippocampus and prefrontal cortex, both crucial for stress management and memory, show this structural change in severe depression.",
+      "The reduction in volume of these regions correlates with cognitive impairments and memory difficulties in depression.",
+      "The hippocampus and prefrontal cortex shrink with severe depression.",
+    ],
+    answer: "Hippocampus and prefrontal cortex",
+    explanation: "The text indicates people with depression tend to have smaller hippocampus and PFC.",
+  },
+  {
+    id: "bf-124",
+    chapter: "Psychiatric Disorders",
+    clues: [
+      "This condition emerges following exposure to traumatic experiences or events, causing re-experiencing and avoidance symptoms.",
+      "The diagnosis requires that a qualifying traumatic event triggered the cluster of subsequent symptoms.",
+      "PTSD is caused by traumatic experience or event.",
+    ],
+    answer: "Traumatic experience or event",
+    explanation: "The text indicates PTSD develops after exposure to traumatic events.",
+  },
+  {
+    id: "bf-125",
+    chapter: "Addiction",
+    clues: [
+      "Drug abuse and addiction to the U.S. economy costs this annual amount when including treatment, crime, and lost productivity.",
+      "The economic burden reflects not only healthcare costs but also criminal justice expenditures and workforce impacts.",
+      "U.S. addiction costs $700 billion per year.",
+    ],
+    answer: "$700 billion per year",
+    explanation: "The text states the U.S. spends $700 billion each year on addiction-related costs.",
+  },
+  {
+    id: "bf-126",
+    chapter: "Addiction",
+    clues: [
+      "This neurotransmitter drives the brain's reward system and is central to understanding addiction across all drug types.",
+      "Its dysregulation in brain circuits underlies compulsive drug-seeking behavior despite negative consequences.",
+      "Dopamine controls the brain's reward system.",
+    ],
+    answer: "Dopamine",
+    explanation: "The text indicates dopamine controls the brain's reward system.",
+  },
+  {
+    id: "bf-127",
+    chapter: "Addiction",
+    clues: [
+      "This collection of brain structures deep within the brain drives both healthy behaviors like eating and socializing and addictive drug use.",
+      "The system's involvement in both normal motivation and pathological addiction explains how drugs hijack natural reward pathways.",
+      "The limbic system drives healthy and addictive behaviors.",
+    ],
+    answer: "Limbic system",
+    explanation: "The text states the limbic system drives both healthy and addictive behaviors.",
+  },
+  {
+    id: "bf-128",
+    chapter: "Addiction",
+    clues: [
+      "Approximately this number of Americans die from opioid overdoses every 24 hours, creating an ongoing public health emergency.",
+      "The epidemic has been driven by overprescription of pharmaceutical opioids and availability of street drugs like fentanyl.",
+      "Nearly 100 Americans die daily from opioid overdoses.",
+    ],
+    answer: "Nearly 100 Americans",
+    explanation: "The text states nearly 100 Americans die from opioid overdoses each day.",
+  },
+  {
+    id: "bf-129",
+    chapter: "Addiction",
+    clues: [
+      "This phenomenon occurs when the body adapts to repeated drug exposure and requires higher doses to achieve the same effect.",
+      "The brain's adjustment to chronic substance presence underlies the escalating dosages common in addiction.",
+      "Tolerance in addiction is when the body becomes \"used to\" the drug.",
+    ],
+    answer: "Body becomes \"used to\" the drug",
+    explanation: "The text defines tolerance as the body requiring more of a drug for the same effect.",
+  },
+  {
+    id: "bf-130",
+    chapter: "Addiction",
+    clues: [
+      "This collection of physically unpleasant symptoms emerges when a person stops using an addictive substance after prolonged exposure.",
+      "Withdrawal can range from mild discomfort to life-threatening seizures, depending on the drug and individual factors.",
+      "Withdrawal in addiction involves unpleasant physical symptoms from drug absence.",
+    ],
+    answer: "Unpleasant physical symptoms from drug absence",
+    explanation: "The text describes withdrawal as unpleasant symptoms from lack of a drug.",
+  },
+  {
+    id: "bf-131",
+    chapter: "Addiction",
+    clues: [
+      "This medication binds to opioid receptors without producing a biological effect, effectively blocking opioids' addictive and pain-relief properties.",
+      "When administered quickly enough after an overdose, it can reverse the life-threatening breathing suppression.",
+      "Naloxone blocks opioid receptors and reverses opioid overdose.",
+    ],
+    answer: "Naloxone",
+    explanation: "The text identifies naloxone as binding to opioid receptors without producing effects.",
+  },
+  {
+    id: "bf-132",
+    chapter: "Addiction",
+    clues: [
+      "This medication, approved by the FDA for tobacco cessation, mimics nicotine's action on dopamine while being less addictive.",
+      "It attaches to specific nicotinic acetylcholine receptors thought responsible for nicotine's addictive properties.",
+      "Varenicline is approved for tobacco cessation.",
+    ],
+    answer: "Varenicline",
+    explanation: "The text states varenicline was approved by FDA in 2006 for tobacco cessation.",
+  },
+  {
+    id: "bf-133",
+    chapter: "Addiction",
+    clues: [
+      "This psychoactive compound found in cannabis plants alters perception and distorts the user's sense of time, space, and self.",
+      "Its effects begin within minutes when smoked due to rapid absorption through the lungs.",
+      "THC is the mind-altering chemical in marijuana.",
+    ],
+    answer: "Mind-altering chemical in marijuana",
+    explanation: "The text identifies THC as the mind-altering chemical in Cannabis.",
+  },
+  {
+    id: "bf-134",
+    chapter: "Addiction",
+    clues: [
+      "When smoked, the effects of this cannabis compound range from minutes to several hours depending on dose and individual factors.",
+      "The rapid onset contrasts with slower absorption when marijuana is consumed orally as food products.",
+      "Marijuana effects last within minutes to several hours when smoked.",
+    ],
+    answer: "Within minutes to several hours",
+    explanation: "The text indicates THC takes effect within minutes and effects last hours.",
+  },
+  {
+    id: "bf-135",
+    chapter: "Addiction",
+    clues: [
+      "This category of addiction costs the U.S. economy approximately this annual amount through healthcare, accidents, and lost productivity.",
+      "The economic burden includes direct medical costs and indirect expenses from alcohol-related crime and workplace impairment.",
+      "The annual U.S. cost of alcohol abuse is about $250 billion.",
+    ],
+    answer: "About $250 billion",
+    explanation: "The text estimates the annual cost of alcohol abuse at $250 billion.",
+  },
+  {
+    id: "bf-136",
+    chapter: "Injury & Illness",
+    clues: [
+      "More than 79,000 people in the U.S. are diagnosed annually with tumors that originate in this organ.",
+      "This represents both cancers that begin in brain tissue and metastatic tumors that spread from other sites.",
+      "More than 79,000 people in the U.S. are diagnosed annually with primary brain tumors.",
+    ],
+    answer: "More than 79,000",
+    explanation: "The text states more than 79,000 people are diagnosed with primary brain tumors annually.",
+  },
+  {
+    id: "bf-137",
+    chapter: "Injury & Illness",
+    clues: [
+      "Approximately 26,000 of the annual primary brain tumors diagnosed in the U.S. fall into this malignant category.",
+      "The remainder are benign tumors, which can still be dangerous due to their space-occupying effects.",
+      "About 26,000 primary brain tumors are malignant.",
+    ],
+    answer: "About 26,000",
+    explanation: "The text indicates about 26,000 of primary tumors are malignant.",
+  },
+  {
+    id: "bf-138",
+    chapter: "Injury & Illness",
+    clues: [
+      "This type of brain cancer involves uncontrolled proliferation of immature glial cells, making it both aggressive and difficult to treat.",
+      "It is the most common form of malignant primary brain cancer.",
+      "A glioblastoma is proliferation of immature glial cells.",
+    ],
+    answer: "Proliferation of immature glial cells",
+    explanation: "The text defines glioblastoma as the most common form of brain cancer.",
+  },
+  {
+    id: "bf-139",
+    chapter: "Injury & Illness",
+    clues: [
+      "This benign tumor arises in the meninges—the protective tissue layers covering the brain—and is the most common primary brain tumor.",
+      "Despite being non-cancerous, it can still cause serious symptoms by compressing healthy brain tissue.",
+      "A meningioma is the most common type of primary brain tumor.",
+    ],
+    answer: "Meningioma",
+    explanation: "The text states meningioma is the most common type of primary brain tumor.",
+  },
+  {
+    id: "bf-140",
+    chapter: "Injury & Illness",
+    clues: [
+      "The earliest known instances of surgical procedures on the brain occurred approximately this many years ago in Asia Minor.",
+      "Archaeological evidence shows that these ancient surgeries were performed to treat wounds or possibly other conditions.",
+      "The first brain surgeries occurred about 6,000 years ago.",
+    ],
+    answer: "About 6,000 years ago",
+    explanation: "The text indicates the first known brain surgeries occurred about 6,000 years ago in Asia Minor.",
+  },
+  {
+    id: "bf-141",
+    chapter: "Injury & Illness",
+    clues: [
+      "Approximately this percentage of ancient Incan skulls showed evidence of bone healing and regrowth following surgical removal of skull bone.",
+      "The evidence demonstrates that many patients survived these procedures and the bone successfully regenerated.",
+      "About 90 percent of ancient Incan skulls by the 1400s showed bone regrowth.",
+    ],
+    answer: "About 90 percent by 1400s",
+    explanation: "The text states by the 1400s, about 90 percent of ancient skulls showed bone regrowth.",
+  },
+  {
+    id: "bf-142",
+    chapter: "Injury & Illness",
+    clues: [
+      "Respiratory failure due to the depressant effect of this drug class accounts for the majority of overdose deaths.",
+      "The drug suppresses the brain's control of breathing, leading to fatal oxygen deprivation.",
+      "Breathing stops during most opioid overdose deaths.",
+    ],
+    answer: "Breathing stops",
+    explanation: "The text states opioids can cause breathing to stop, the usual cause of overdose death.",
+  },
+  {
+    id: "bf-143",
+    chapter: "Injury & Illness",
+    clues: [
+      "This transient disruption in brain activity can result from head trauma and may involve temporary loss of consciousness.",
+      "Despite being considered \"mild,\" concussions can cause measurable changes in brain structure that persist for months.",
+      "A concussion is a temporary disruption in brain activity.",
+    ],
+    answer: "Temporary disruption in brain activity",
+    explanation: "The text describes a concussion as temporary disruption in brain activity.",
+  },
+  {
+    id: "bf-144",
+    chapter: "Injury & Illness",
+    clues: [
+      "This degenerative brain disease can develop following multiple head injuries and traumas over an extended period.",
+      "It is characterized by accumulation of abnormal proteins that can begin months, years, or even decades after trauma.",
+      "Chronic traumatic encephalopathy (CTE) results from repeated head trauma.",
+    ],
+    answer: "Chronic traumatic encephalopathy (CTE)",
+    explanation: "The text identifies CTE as resulting from repeated head trauma.",
+  },
+  {
+    id: "bf-145",
+    chapter: "Injury & Illness",
+    clues: [
+      "These symptoms—including cognitive decline, disorientation, and eventual progressive dementia—are characteristic of this degenerative condition.",
+      "The progression can lead to severe behavioral changes and loss of independence.",
+      "Memory loss, confusion, and dementia are associated with CTE.",
+    ],
+    answer: "Memory loss, confusion, dementia",
+    explanation: "The text lists these as associated symptoms of CTE.",
+  },
+  {
+    id: "bf-146",
+    chapter: "Injury & Illness",
+    clues: [
+      "This condition involves mental problems ranging from mild concentration and memory difficulties to severe dementia in HIV-positive individuals.",
+      "The mechanism involves viral proteins causing nerve damage and disrupting normal neural communication.",
+      "HIV-associated neurocognitive disorders (HAND) involve mental problems ranging to dementia.",
+    ],
+    answer: "Mental problems ranging to dementia",
+    explanation: "The text describes HAND as ranging from mild concentration difficulty to AIDS dementia.",
+  },
+  {
+    id: "bf-147",
+    chapter: "Injury & Illness",
+    clues: [
+      "More than half of individuals infected with this virus develop neurological complications affecting cognition and brain function.",
+      "Even patients receiving effective antiretroviral treatment can develop mild symptoms of this condition.",
+      "More than half of HIV-positive people develop HAND.",
+    ],
+    answer: "More than half",
+    explanation: "The text states more than half of people with HIV develop HAND.",
+  },
+  {
+    id: "bf-148",
+    chapter: "Injury & Illness",
+    clues: [
+      "This cerebrovascular event, caused by either blood vessel rupture or blood clot, leads to more than 130,000 American deaths annually.",
+      "It is a leading cause of long-term disability, costing approximately $33 billion annually in healthcare and lost productivity.",
+      "More than 130,000 Americans die from stroke annually.",
+    ],
+    answer: "More than 130,000",
+    explanation: "The text indicates more than 130,000 Americans die from stroke each year.",
+  },
+  {
+    id: "bf-149",
+    chapter: "Neurodegenerative Diseases",
+    clues: [
+      "These misfolded proteins accumulate abnormally and can form irregular clumps that damage cells in neurodegenerative diseases.",
+      "The name comes from a disease affecting cattle, suggesting a mechanism applicable to human brain diseases.",
+      "Misfolded proteins in neurodegenerative diseases are prions.",
+    ],
+    answer: "Prions",
+    explanation: "The text identifies prions as misfolded proteins implicated in neurodegenerative diseases.",
+  },
+  {
+    id: "bf-150",
+    chapter: "Neurodegenerative Diseases",
+    clues: [
+      "This neurodegenerative condition is the leading cause of dementia in older adults, accounting for 60-70 percent of dementia cases.",
+      "It involves progressive and irreversible degeneration of the brain that eventually becomes fatal.",
+      "Alzheimer's disease is the most common cause of dementia in older adults.",
+    ],
+    answer: "Alzheimer's disease",
+    explanation: "The text identifies Alzheimer's as the most common cause of dementia in elderly.",
+  },
+  {
+    id: "bf-151",
+    chapter: "Neurodegenerative Diseases",
+    clues: [
+      "This percentage of dementia cases can be attributed to Alzheimer's disease, making it the dominant form of dementia.",
+      "The remaining cases involve other causes including vascular dementia, Lewy body disease, and frontotemporal dementia.",
+      "60 to 70 percent of dementia cases are Alzheimer's.",
+    ],
+    answer: "60 to 70 percent",
+    explanation: "The text states approximately 60-70 percent of dementia cases are Alzheimer's.",
+  },
+  {
+    id: "bf-152",
+    chapter: "Neurodegenerative Diseases",
+    clues: [
+      "In 2014, this disease was identified as the sixth leading cause of death in the United States, though actual deaths may be underreported.",
+      "The true impact may be higher, as dementia-related conditions like aspiration pneumonia are sometimes listed as primary causes.",
+      "Alzheimer's was the sixth leading cause of death in the U.S. in 2014.",
+    ],
+    answer: "Sixth leading cause",
+    explanation: "The text indicates Alzheimer's was the sixth leading cause of death in 2014.",
+  },
+  {
+    id: "bf-153",
+    chapter: "Neurodegenerative Diseases",
+    clues: [
+      "This percentage of all people over 65 years old have Alzheimer's disease, with rates increasing dramatically with age.",
+      "Those over 85 have rates up to 25-50 percent, showing how strongly age is associated with this condition.",
+      "5 to 8 percent of people over 65 have Alzheimer's.",
+    ],
+    answer: "5 to 8 percent",
+    explanation: "The text indicates Alzheimer's affects 5-8 percent of people over 65.",
+  },
+  {
+    id: "bf-154",
+    chapter: "Neurodegenerative Diseases",
+    clues: [
+      "These two protein abnormalities—one forming extracellular plaques and the other forming intracellular tangles—are key indicators of Alzheimer's pathology.",
+      "Scientists debate whether these markers cause the disease or merely indicate its presence.",
+      "Amyloid-beta and tau are the two candidate primary biomarkers for Alzheimer's.",
+    ],
+    answer: "Amyloid-beta and tau",
+    explanation: "The text identifies these as candidate biomarkers for defining Alzheimer's.",
+  },
+  {
+    id: "bf-155",
+    chapter: "Neurodegenerative Diseases",
+    clues: [
+      "These extracellular clumps, composed of fragments of amyloid precursor protein, accumulate first in the neocortex during Alzheimer's development.",
+      "Their buildup is believed to initiate a cascade of neuronal dysfunction, though some soluble forms are more toxic than insoluble aggregates.",
+      "Amyloid-beta fragments form extracellular plaques in Alzheimer's.",
+    ],
+    answer: "Amyloid-beta fragments",
+    explanation: "The text indicates amyloid-beta forms extracellular senile plaques.",
+  },
+  {
+    id: "bf-156",
+    chapter: "Neurodegenerative Diseases",
+    clues: [
+      "This protein normally works to stabilize the cellular skeleton in neurons, but becomes defective and tangles in Alzheimer's disease.",
+      "When hyperphosphorylated, it aggregates into neurofibrillary tangles that disrupt axonal transport.",
+      "Tau protein normally stabilizes the cellular skeleton.",
+    ],
+    answer: "Stabilizes cellular skeleton",
+    explanation: "The text states tau normally stabilizes the cellular skeleton.",
+  },
+  {
+    id: "bf-157",
+    chapter: "Neurodegenerative Diseases",
+    clues: [
+      "This medical advancement reflects decades of research into Alzheimer's treatments, though current options primarily address symptoms.",
+      "The FDA-approved medications represent a significant but limited therapeutic arsenal for this progressive disease.",
+      "FDA approval now covers five prescription drugs for Alzheimer's.",
+    ],
+    answer: "Five prescription drugs",
+    explanation: "The text indicates the FDA has approved five drugs for treating Alzheimer's.",
+  },
+  {
+    id: "bf-158",
+    chapter: "Neurodegenerative Diseases",
+    clues: [
+      "These three medications work by preventing the breakdown of acetylcholine, thereby increasing this neurotransmitter's availability for memory and learning.",
+      "They are approved for mild to moderate stages of Alzheimer's disease.",
+      "Donepezil, galantamine, and rivastigmine are cholinesterase inhibitors for Alzheimer's.",
+    ],
+    answer: "Donepezil, galantamine, rivastigmine",
+    explanation: "The text lists these three as cholinesterase inhibitors for Alzheimer's.",
+  },
+  {
+    id: "bf-159",
+    chapter: "Neurodegenerative Diseases",
+    clues: [
+      "By mid-century, the prevalence of Alzheimer's in the U.S. is projected to reach this number of affected individuals.",
+      "This dramatic increase reflects the aging of the population and longer lifespans in developed countries.",
+      "The estimated U.S. Alzheimer's prevalence by 2050 is 13.8 million people.",
+    ],
+    answer: "13.8 million people",
+    explanation: "The text projects Alzheimer's will affect 13.8 million in U.S. by 2050.",
+  },
+  {
+    id: "bf-160",
+    chapter: "Neurodegenerative Diseases",
+    clues: [
+      "This midbrain structure, part of the basal ganglia, shows the most significant dopamine neuron loss in Parkinson's disease.",
+      "The selective vulnerability of dopamine neurons in this region explains why motor symptoms are so prominent.",
+      "The substantia nigra shows most dopamine neuron death in Parkinson's.",
+    ],
+    answer: "Substantia nigra",
+    explanation: "The text identifies the substantia nigra as the region of greatest dopamine loss.",
+  },
+  {
+    id: "bf-161",
+    chapter: "Neurodegenerative Diseases",
+    clues: [
+      "Approximately this percentage of Parkinson's cases involve genetic factors, though most cases result from gene-environment interactions.",
+      "Several genes have been identified that increase susceptibility, though the inheritance patterns are complex.",
+      "15 to 25 percent of Parkinson's cases involve genetic factors.",
+    ],
+    answer: "15 to 25 percent",
+    explanation: "The text indicates 15-25 percent of adult-onset Parkinson's have a relative with disease.",
+  },
+  {
+    id: "bf-162",
+    chapter: "Neurodegenerative Diseases",
+    clues: [
+      "These protein accumulations found in the brains of Parkinson's patients are composed primarily of alpha-synuclein entangled with other proteins.",
+      "They are also implicated in Lewy body dementia and other neurodegenerative diseases.",
+      "Lewy bodies are composed of alpha-synuclein and other proteins.",
+    ],
+    answer: "Alpha-synuclein and other proteins",
+    explanation: "The text indicates Lewy bodies contain alpha-synuclein with other proteins.",
+  },
+  {
+    id: "bf-163",
+    chapter: "Neurodegenerative Diseases",
+    clues: [
+      "This specific gene mutation accounts for about 25-40 percent of familial ALS cases and can cause both motor neuron and dementia symptoms.",
+      "The abnormal expansion of repeats in this gene disrupts protein function and triggers neurodegeneration.",
+      "The C9ORF72 gene mutation causes about 25-40 percent of familial ALS.",
+    ],
+    answer: "C9ORF72 gene",
+    explanation: "The text states this gene accounts for 25-40 percent of hereditary ALS cases.",
+  },
+  {
+    id: "bf-164",
+    chapter: "Neurodegenerative Diseases",
+    clues: [
+      "Only this small percentage of ALS cases are purely genetic, with the majority involving both genetic and environmental factors.",
+      "Most ALS cases appear to be sporadic, with no family history or clear inheritance pattern.",
+      "Only 5 to 10 percent of ALS cases are purely genetic.",
+    ],
+    answer: "Only 5 to 10 percent",
+    explanation: "The text indicates only 5-10 percent of ALS cases are due solely to genetics.",
+  },
+  {
+    id: "bf-165",
+    chapter: "Neurodegenerative Diseases",
+    clues: [
+      "Most people diagnosed with ALS experience symptom onset to death within this timeframe, though individual variation is significant.",
+      "The progressive degeneration of motor neurons leads to loss of voluntary movement and breathing control.",
+      "Most ALS patients survive 3 to 5 years after symptom onset.",
+    ],
+    answer: "3 to 5 years",
+    explanation: "The text states most ALS patients die within 3-5 years after symptoms appear.",
+  },
+  {
+    id: "bf-166",
+    chapter: "Neurodegenerative Diseases",
+    clues: [
+      "Approximately this percentage of ALS patients, exemplified by physicist Stephen Hawking, survive 10 or more years.",
+      "These long-term survivors often have slower disease progression or atypical presentations of the condition.",
+      "About 10 percent of ALS patients survive 10 or more years.",
+    ],
+    answer: "About 10 percent",
+    explanation: "The text indicates about 10 percent of ALS patients survive 10 years or more.",
+  },
+  {
+    id: "bf-167",
+    chapter: "Neurodegenerative Diseases",
+    clues: [
+      "This medication, approved by the FDA, helps reduce the involuntary jerking movements that characterize Huntington's disease.",
+      "It was one of the first approved treatments specifically addressing movement symptoms in this genetic disorder.",
+      "Deutetrabenazine is an approved drug that helps with Huntington's disease chorea.",
+    ],
+    answer: "Deutetrabenazine",
+    explanation: "The text states FDA approved deutetrabenazine for treating Huntington's chorea.",
+  },
+  {
+    id: "bf-168",
+    chapter: "Neurodegenerative Diseases",
+    clues: [
+      "The normal version of the HTT gene contains approximately this number of repeats of a three-nucleotide sequence.",
+      "This variation is necessary for normal huntingtin protein function and brain development.",
+      "10 to 35 repeats are normal in the HTT gene.",
+    ],
+    answer: "10 to 35 repeats",
+    explanation: "The text states the normal HTT gene has about 10-35 repeats of CAG.",
+  },
+  {
+    id: "bf-169",
+    chapter: "Neurodegenerative Diseases",
+    clues: [
+      "Individuals with Huntington's disease have abnormal expansions of CAG repeats ranging from this lower threshold to beyond 120 in the HTT gene.",
+      "The number of repeats correlates directly with disease severity and age of symptom onset.",
+      "Huntington's disease involves 36 to 120 or more CAG repeats.",
+    ],
+    answer: "36 to 120 or more",
+    explanation: "The text indicates Huntington's patients can have 36-120+ CAG repeats.",
+  },
+  {
+    id: "bf-170",
+    chapter: "Kinds of Research",
+    clues: [
+      "Scientists first used this technique involving chemical stains to observe individual neurons under a light microscope in the late 1800s.",
+      "The method allowed the first visualization of the complex branching structures of neurons.",
+      "Histological staining was the first technique used to observe neurons.",
+    ],
+    answer: "Histological staining",
+    explanation: "The text indicates histology with light microscopes first revealed neurons.",
+  },
+  {
+    id: "bf-171",
+    chapter: "Kinds of Research",
+    clues: [
+      "This magnification power of standard light microscopes allows researchers to view cellular and subcellular structures in detail.",
+      "The limit results from the wavelength of visible light used in the microscope.",
+      "Light microscopy can magnify structures up to 1,000 times.",
+    ],
+    answer: "Up to 1,000 times",
+    explanation: "The text states light microscopy can magnify structures up to 1,000 times.",
+  },
+  {
+    id: "bf-172",
+    chapter: "Kinds of Research",
+    clues: [
+      "This powerful microscopy technique, capable of producing images magnified hundreds of thousands of times, was first developed during this decade.",
+      "The development resolved scientific debates about neuronal organization and whether neurons are individual cells.",
+      "Electron microscopy was developed in the 1950s.",
+    ],
+    answer: "1950s",
+    explanation: "The text indicates electron microscopy was developed in the 1950s.",
+  },
+  {
+    id: "bf-173",
+    chapter: "Kinds of Research",
+    clues: [
+      "This level of magnification, made possible by directing electron beams through tissue and using electromagnetic lenses, allowed resolution of synaptic structures.",
+      "The extreme magnification capability revealed fundamental truths about neural organization impossible to see with light microscopy.",
+      "Electron microscopy can achieve magnification many hundreds of thousands times.",
+    ],
+    answer: "Many hundreds of thousands times",
+    explanation: "The text states electron microscopy can magnify structures hundreds of thousands times.",
+  },
+  {
+    id: "bf-174",
+    chapter: "Kinds of Research",
+    clues: [
+      "This acronym stands for the noninvasive imaging technique that uses radio waves and strong magnets to create detailed brain images.",
+      "The technology detects the distribution of water molecules to construct high-resolution structural images.",
+      "MRI stands for magnetic resonance imaging.",
+    ],
+    answer: "Magnetic resonance imaging",
+    explanation: "The text indicates MRI is a technique using magnetic fields for brain imaging.",
+  },
+  {
+    id: "bf-175",
+    chapter: "Kinds of Research",
+    clues: [
+      "This neuroimaging technology was developed during this decade and is now widely used in both research and clinical settings.",
+      "Its development represented a major advance in the ability to visualize brain structure without radiation exposure.",
+      "MRI was developed in the 1980s.",
+    ],
+    answer: "In the 1980s",
+    explanation: "The text states MRI was developed in the 1980s.",
+  },
+  {
+    id: "bf-176",
+    chapter: "Kinds of Research",
+    clues: [
+      "The human genome consists of approximately this many base pairs, each contributing to the genetic instructions for life.",
+      "This vast amount of genetic information is packaged into 23 pairs of chromosomes.",
+      "The human genome has 3 billion pairs of DNA bases.",
+    ],
+    answer: "3 billion pairs",
+    explanation: "The text indicates the human genome has 3 billion pairs of DNA bases.",
+  },
+  {
+    id: "bf-177",
+    chapter: "Kinds of Research",
+    clues: [
+      "The human genome contains an estimated this number of genes that code for proteins and regulatory functions.",
+      "This count was lower than initially expected and revealed that much DNA serves non-coding regulatory functions.",
+      "The human genome has an estimated 20,000 genes.",
+    ],
+    answer: "Estimated 20,000 genes",
+    explanation: "The text indicates an estimated 20,000 genes in the human genome.",
+  },
+  {
+    id: "bf-178",
+    chapter: "Kinds of Research",
+    clues: [
+      "These laboratory tools can identify variations in the number of DNA copies within genetic sequences across the genome.",
+      "They detect copy number variations that might be missed by traditional genetic sequencing methods.",
+      "Microarrays identify copy number variations in DNA.",
+    ],
+    answer: "Copy number variations in DNA",
+    explanation: "The text indicates DNA microarrays identify variations and repeats in DNA.",
+  },
+  {
+    id: "bf-179",
+    chapter: "Kinds of Research",
+    clues: [
+      "This imaging technique detects the relationship between brain activity and blood flow, inferring neural activity from oxygen levels.",
+      "It relies on the principle that more active brain regions require more oxygen and nutrients.",
+      "fMRI detects blood flow and oxygen levels.",
+    ],
+    answer: "Blood flow and oxygen levels",
+    explanation: "The text indicates fMRI monitors blood flow and oxygen-rich vs. oxygen-poor blood.",
+  },
+  {
+    id: "bf-180",
+    chapter: "Kinds of Research",
+    clues: [
+      "This is the abbreviated form referring to brain imaging that measures changes in blood oxygenation to indicate neural activity.",
+      "It is the most widely used neuroimaging tool for mapping brain function in research and clinical settings.",
+      "fMRI is functional MRI called this for short.",
+    ],
+    answer: "fMRI",
+    explanation: "The text uses this abbreviation throughout for functional magnetic resonance imaging.",
+  },
+  {
+    id: "bf-181",
+    chapter: "Kinds of Research",
+    clues: [
+      "This neuroimaging technique detects the weak magnetic fields generated by synchronized electrical currents in groups of neurons.",
+      "It provides excellent temporal resolution for tracking rapid changes in brain activity.",
+      "MEG detects electrical currents in neurons.",
+    ],
+    answer: "Electrical currents in neurons",
+    explanation: "The text indicates MEG detects actual electrical currents from synchronized neurons.",
+  },
+  {
+    id: "bf-182",
+    chapter: "Kinds of Research",
+    clues: [
+      "MEG provides this type of resolution, allowing millisecond-level tracking of brain activity, but poor spatial resolution compared to other techniques.",
+      "The resolution limitations can be overcome by combining MEG data with fMRI data from the same task.",
+      "MEG has good temporal resolution, poor spatial resolution.",
+    ],
+    answer: "Good temporal, poor spatial",
+    explanation: "The text indicates MEG is useful for rapid changes but not precise location.",
+  },
+  {
+    id: "bf-183",
+    chapter: "Solving Human Problems",
+    clues: [
+      "These technological systems read neural activity and translate it into commands that allow paralyzed individuals to control external devices or limbs.",
+      "They bypass damaged neural pathways by creating new communication channels between brain signals and external devices.",
+      "Brain-machine interfaces allow paralyzed patients to control external devices.",
+    ],
+    answer: "Brain-machine interfaces",
+    explanation: "The text indicates electrodes in the brain can enable neural control of devices.",
+  },
+  {
+    id: "bf-184",
+    chapter: "Solving Human Problems",
+    clues: [
+      "This landmark year marked the first time quadriplegic patients successfully learned to control movements of a robotic arm after months of training.",
+      "The breakthrough demonstrated the feasibility of directly translating brain signals into sophisticated external device control.",
+      "The breakthrough year for robotic arm control was 2011.",
+    ],
+    answer: "2011",
+    explanation: "The text indicates a breakthrough occurred in 2011 when quadriplegic patients controlled a robotic arm.",
+  },
+  {
+    id: "bf-185",
+    chapter: "Solving Human Problems",
+    clues: [
+      "This neurosurgical technique involves implanting a device that sends electrical impulses to specific brain regions for therapeutic purposes.",
+      "It can bypass damaged neural circuits or modulate activity in regions contributing to various disorders.",
+      "Deep brain stimulation (DBS) sends electrical impulses to the brain.",
+    ],
+    answer: "Deep brain stimulation (DBS)",
+    explanation: "The text describes DBS as implanting a neurostimulator that sends electrical impulses.",
+  },
+  {
+    id: "bf-186",
+    chapter: "Solving Human Problems",
+    clues: [
+      "Among the conditions successfully treated with this stimulation technique are epilepsy, dystonia, Tourette's syndrome, and obsessive-compulsive disorder.",
+      "Researchers are investigating its potential applications for treatment-resistant depression and other psychiatric conditions.",
+      "DBS can treat epilepsy, dystonia, Tourette's, and OCD.",
+    ],
+    answer: "Epilepsy, dystonia, Tourette's, OCD",
+    explanation: "The text lists these disorders as treatable with DBS.",
+  },
+  {
+    id: "bf-187",
+    chapter: "Solving Human Problems",
+    clues: [
+      "This noninvasive technique delivers brief magnetic pulses to the brain surface, similar in strength to MRI magnetic fields.",
+      "It can produce focal brain activity changes and has been researched for treating depression and other conditions.",
+      "Transcranial magnetic stimulation (TMS) uses magnetic pulses to the brain.",
+    ],
+    answer: "Magnetic pulses to brain surface",
+    explanation: "The text describes TMS as painless magnetic pulses targeted to the cortex.",
+  },
+  {
+    id: "bf-188",
+    chapter: "Solving Human Problems",
+    clues: [
+      "TMS pulses for depression are typically focused on this prefrontal region, chosen for its role in mood regulation.",
+      "The left side of this region shows greater activity increases associated with mood improvement.",
+      "TMS pulses for depression are focused on the left prefrontal cortex.",
+    ],
+    answer: "Left prefrontal cortex",
+    explanation: "The text indicates TMS pulses are focused over the left PFC for depression.",
+  },
+  {
+    id: "bf-189",
+    chapter: "Solving Human Problems",
+    clues: [
+      "This noninvasive brain stimulation technique uses low electrical current delivered through electrodes placed on the scalp.",
+      "It can modulate brain activity by changing the electrical potential across neural membranes.",
+      "tDCS uses low electrical current to alter brain activity.",
+    ],
+    answer: "Low electrical current",
+    explanation: "The text indicates tDCS uses one or two milliamperes of direct current.",
+  },
+  {
+    id: "bf-190",
+    chapter: "Solving Human Problems",
+    clues: [
+      "This fundamental biological barrier, formed by tightly packed endothelial cells lining blood vessels, limits drug delivery to the brain.",
+      "Most drugs delivered by conventional means—pills, patches, or injections—cannot cross this selective barrier.",
+      "The blood-brain barrier limits drug delivery to the brain.",
+    ],
+    answer: "Blood-brain barrier",
+    explanation: "The text identifies the blood-brain barrier as preventing most drugs from reaching the brain.",
+  },
+  {
+    id: "bf-191",
+    chapter: "Solving Human Problems",
+    clues: [
+      "These tiny particles and engineered molecules can traverse the blood-brain barrier, potentially delivering drugs to the brain more effectively.",
+      "Scientists are developing sophisticated delivery systems that exploit transporters or receptor mechanisms to cross this barrier.",
+      "Nanoparticles and engineered molecules help drugs cross the blood-brain barrier.",
+    ],
+    answer: "Nanoparticles and engineered molecules",
+    explanation: "The text mentions nanoparticles as a strategy to shuttle drugs across the barrier.",
+  },
+  {
+    id: "bf-192",
+    chapter: "Solving Human Problems",
+    clues: [
+      "Adeno-associated virus and lentivirus are considered the safest vectors for this therapeutic approach, with other viruses showing higher risk profiles.",
+      "These vectors can carry corrected genes into brain cells, potentially treating genetic neurological disorders.",
+      "Adeno-associated and lentiviruses are the safest vectors for gene therapy.",
+    ],
+    answer: "Adeno-associated and lentiviruses",
+    explanation: "The text identifies these as the safest vectors for gene replacement therapy.",
+  },
+  {
+    id: "bf-193",
+    chapter: "Neuroscience in Society",
+    clues: [
+      "This emerging field combines neuroscience with economics to investigate how brain processes influence financial and economic decision-making.",
+      "It challenges traditional economic theory by revealing that financial decisions often deviate from purely rational models.",
+      "Neuroeconomics is the study of brain processes in financial decisions.",
+    ],
+    answer: "Study of brain processes in financial decisions",
+    explanation: "The text defines neuroeconomics as investigating brain processes behind economic decisions.",
+  },
+  {
+    id: "bf-194",
+    chapter: "Neuroscience in Society",
+    clues: [
+      "This fundamental economic theory assumes that individuals acting in self-interest will produce a naturally fair distribution of resources.",
+      "However, neuroscience research reveals that economic decisions are often driven by emotion and gut instinct.",
+      "Modern capitalism relies on rational individual purchasing decisions.",
+    ],
+    answer: "Individuals make rational purchasing decisions",
+    explanation: "The text indicates capitalism assumes people make rational decisions in self-interest.",
+  },
+  {
+    id: "bf-195",
+    chapter: "Neuroscience in Society",
+    clues: [
+      "Activity in this cortical region increases when individuals decide to take financial risks, such as doubling a monetary wager.",
+      "This area likely interacts with limbic regions to help people anticipate negative consequences of risky choices.",
+      "The insular cortex activity increases during financial risk-taking.",
+    ],
+    answer: "Insular cortex",
+    explanation: "The text states activity increases in the insular cortex when players risk large sums.",
+  },
+  {
+    id: "bf-196",
+    chapter: "Neuroscience in Society",
+    clues: [
+      "These historical practices—including phrenology, eugenics, and forced sterilization—misused brain science to justify discrimination and abuse.",
+      "Modern neuroscience ethics seeks to prevent such abuses by establishing rigorous ethical frameworks.",
+      "Phrenology, eugenics, and forced sterilization are unethical historical brain research practices.",
+    ],
+    answer: "Phrenology, eugenics, forced sterilization",
+    explanation: "The text lists these as unethical practices in the history of brain research.",
+  },
+  {
+    id: "bf-197",
+    chapter: "Neuroscience in Society",
+    clues: [
+      "This potential intervention raises profound ethical questions about whether genetic modification should be used to alter traits in unborn children.",
+      "Debates center on distinction between treating disease and enhancing traits like intelligence.",
+      "Gene therapy to alter traits in unborn children raises ethical questions.",
+    ],
+    answer: "Gene therapy to alter traits in unborn children",
+    explanation: "The text questions whether it is ethical to alter a child's genes to prevent disease.",
+  },
+  {
+    id: "bf-198",
+    chapter: "Neuroscience in Society",
+    clues: [
+      "Scientists argue this group, broader than just researchers, should participate in determining ethical limits of emerging neurological technologies.",
+      "Collaboration ensures that scientific advances are guided by diverse perspectives and values.",
+      "Society through collaboration between scientists and others should decide ethical limits of genetic enhancement.",
+    ],
+    answer: "Society through collaboration between scientists and others",
+    explanation: "The text emphasizes need for conversations between scientists, lawyers, philosophers on ethics.",
   },
 ];
-

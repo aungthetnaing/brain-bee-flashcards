@@ -17,7 +17,12 @@ export function FlipCard({ card, revealed, onToggle }: Props) {
 
       {!revealed ? (
         <View style={styles.body}>
-          <Text style={styles.question}>{card.question}</Text>
+          {card.clues.map((clue, i) => (
+            <View key={i} style={styles.clueRow}>
+              <Text style={styles.clueNum}>{i + 1}</Text>
+              <Text style={styles.clue}>{clue}</Text>
+            </View>
+          ))}
           <Text style={styles.hint}>Tap to reveal the answer</Text>
         </View>
       ) : (
@@ -61,6 +66,25 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "700",
     lineHeight: 32,
+  },
+  clueRow: {
+    flexDirection: "row",
+    gap: spacing.sm,
+    marginBottom: spacing.md,
+    alignItems: "flex-start",
+  },
+  clueNum: {
+    color: colors.accent,
+    fontSize: 15,
+    fontWeight: "800",
+    minWidth: 18,
+    textAlign: "center",
+  },
+  clue: {
+    flex: 1,
+    color: colors.text,
+    fontSize: 17,
+    lineHeight: 24,
   },
   hint: {
     color: colors.textMuted,

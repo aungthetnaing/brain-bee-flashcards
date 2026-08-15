@@ -38,7 +38,9 @@ export function BrowseScreen() {
       )}
       renderItem={({ item }) => (
         <View style={styles.row}>
-          <Text style={styles.question}>{item.question}</Text>
+          <Text style={styles.question}>
+            {item.clues[item.clues.length - 1]}
+          </Text>
           <Text style={styles.answer}>{item.answer}</Text>
         </View>
       )}
